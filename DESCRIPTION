@@ -1,0 +1,14 @@
+Package: uiucthemes
+Type: Package
+Title: UIUC Themed RMarkdown templates
+Version: 0.1.0
+Date: 2016-08-21
+Authors@R: c(
+  person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre"))
+  )
+Description: The package contains a beamer template that generates UIUC
+    themed slides
+License: MIT + file LICENSE
+Imports:
+    rmarkdown
+RoxygenNote: 5.0.1
