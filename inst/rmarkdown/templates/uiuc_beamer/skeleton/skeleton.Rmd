@@ -1,0 +1,9 @@
+---
+title: 'UIUC Beamer Theme'
+author: 'John and Mary Doe'
+date: 'Month Day, Year'
+output: 
+  uiucthemes::uiuc_beamer
+---
+
+# Slide Headings are Great!
