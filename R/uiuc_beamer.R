@@ -51,7 +51,7 @@
 #'      toc: true
 #' }
 uiuc_beamer <- function(toc = FALSE,
-                        slide_level = NULL,
+                        slide_level = 3,
                         incremental = FALSE,
                         fig_width = 10,
                         fig_height = 7,
