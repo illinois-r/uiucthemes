@@ -47,6 +47,6 @@ devtools::install_github("coatless/uiucthemes")
 3) Use the `rmarkdown::draft` function to create articles:
 
 ```r
-rmarkdown::draft("MyThesis.Rmd", template = "uiuc_beamer", package = "uiucthemes")
+rmarkdown::draft("slide_deck.Rmd", template = "uiuc_beamer", package = "uiucthemes")
 ```
 
