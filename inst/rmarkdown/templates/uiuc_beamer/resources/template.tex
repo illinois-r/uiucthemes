@@ -47,11 +47,14 @@ $if(CJKmainfont)$
 $endif$
 \fi
 
-
+% Start adding some content
+\usepackage{graphicx}
 \usepackage{color}
 \usepackage{beamerthemebars}
-\usepackage{lmodern}
 \usepackage{multicol}
+\usepackage{multirow}
+\usepackage{hyperref}
+
 
 \usetheme{AnnArbor}
 \usecolortheme{wolverine}
@@ -260,9 +263,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-$if(title)$
-\title{$title$}
-$endif$
+
 $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
@@ -275,6 +276,32 @@ $endif$
 \date{$date$}
 
 \begin{document}
+
+% Necessary due to the ignorenonframetext requirement
+% See: http://tex.stackexchange.com/questions/181032/ignorenonframetext-option-breaks-frame-background-color-option
+\mode<all>{
+\title[
+$if(shorttitle)$
+$shorttitle$
+$else$
+Need a ``\texttt{shorttitle}'' for talk!
+$endif$
+]{
+$if(title)$
+\begin{columns}
+\column{.15\textwidth}
+\hspace{.2in}
+\vspace{.1in}
+\includegraphics{ilogo.pdf}
+\column{.85\textwidth}
+$title$
+\end{columns}
+$else$
+Need to Fill In Title!
+$endif$
+}
+}
+\mode*
 
 $if(title)$
 \frame{\titlepage}
