@@ -54,8 +54,9 @@ Content inside of a box
 Hello Equation \ref{eq:binom}
 ```
 
-This generates:
+**Note: You will also need to save the [`ilogo.pdf` file](https://github.com/coatless/uiucthemes/blob/master/inst/rmarkdown/templates/uiuc_beamer/skeleton/ilogo.pdf) to the folder with the RMarkdown document**. The need for this is negated under the instructions given at the end (RStudio creation & using `rmarkdown::draft()`.
 
+This generates:
 
 ![](uiuc_beamer_slide_example.png)
 
@@ -83,6 +84,7 @@ To use **uiucthemes** from RStudio:
 
 ```r
 install.packages("devtools")
+devtools::install_github("rstudio/rmarkdown")
 devtools::install_github("coatless/uiucthemes")
 ```
 
@@ -98,7 +100,8 @@ devtools::install_github("coatless/uiucthemes")
 2) Install the **rmarkdown** and **uiucthemes** packages:
 
 ```r
-install.packages("rmarkdown")
+install.packages("devtools")
+devtools::install_github("rstudio/rmarkdown")
 devtools::install_github("coatless/uiucthemes")
 ```
     
@@ -107,4 +110,3 @@ devtools::install_github("coatless/uiucthemes")
 ```r
 rmarkdown::draft("slide_deck.Rmd", template = "uiuc_beamer", package = "uiucthemes")
 ```
-
