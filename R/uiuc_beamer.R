@@ -18,13 +18,6 @@
 #' @param fig_crop \code{TRUE} to automatically apply the \code{pdfcrop} utility
 #'   (if available) to pdf figures
 #' @param dev Graphics device to use for figure output (defaults to pdf)
-#' @param df_print Method to be used for printing data frames. Valid values
-#'   include "default", "kable", and "tibble". The "default" method uses
-#'   \code{print.data.frame}. The "kable" method uses the
-#'   \code{\link[knitr:kable]{knitr::kable}} function. The "tibble" method uses
-#'   the \pkg{tibble} package to print a summary of the data frame. In addition
-#'   to the named methods you can also pass an arbitrary function to be used
-#'   for printing data frames.
 #' @param fonttheme Beamer font theme (e.g. "structurebold").
 #' @param highlight Syntax highlighting style. Supported styles include
 #'   "default", "tango", "pygments", "kate", "monochrome", "espresso",
@@ -58,7 +51,6 @@ uiuc_beamer <- function(toc = FALSE,
                         fig_crop = TRUE,
                         fig_caption = TRUE,
                         dev = 'pdf',
-                        df_print = "default",
                         fonttheme = "default",
                         highlight = "default",
                         keep_tex = FALSE,
@@ -79,7 +71,6 @@ uiuc_beamer <- function(toc = FALSE,
                                          fig_crop = fig_crop,
                                          fig_caption = fig_caption,
                                          dev = dev,
-                                         df_print = df_print,
                                          fonttheme = fonttheme,
                                          highlight = highlight,
                                          keep_tex = keep_tex,
