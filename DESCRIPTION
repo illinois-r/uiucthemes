@@ -1,14 +1,20 @@
 Package: uiucthemes
 Type: Package
-Title: UIUC Themed RMarkdown templates
-Version: 0.1.0
-Date: 2016-08-21
+Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
+Version: 0.1.1
+Date: 2016-10-26
 Authors@R: c(
   person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre"))
   )
-Description: The package contains a beamer template that generates UIUC
-    themed slides
+Description: A set of custom 'R' 'Markdown' templates for documents and
+   presentations with the University of Illinois at Urbana-Champaign (UIUC)
+   color scheme and identity standards.
+URL: https://github.com/coatless/uiucthemes
+BugReports: https://github.com/coatless/uiucthemes/issues
+Depends:
+    R (>= 3.0)
 License: MIT + file LICENSE
 Imports:
-    rmarkdown
+    rmarkdown (>= 1.1.0)
 RoxygenNote: 5.0.1
+Encoding: UTF-8

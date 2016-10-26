@@ -4,10 +4,11 @@
 \name{uiucthemes-package}
 \alias{uiucthemes}
 \alias{uiucthemes-package}
-\title{UIUC Themed RMarkdown templates}
+\title{'R' 'Markdown' Themes for 'UIUC' Documents and Presentations}
 \description{
-The package contains a beamer template that generates UIUC
-themed slides
+A set of custom 'R' 'Markdown' templates for documents and
+presentations with the University of Illinois at Urbana-Champaign (UIUC)
+color scheme and identity standards.
 }
 \details{
 Trial run on RMarkdown templates
