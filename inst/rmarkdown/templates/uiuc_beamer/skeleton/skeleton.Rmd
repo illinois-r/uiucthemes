@@ -1,9 +1,59 @@
 ---
-title: 'UIUC Beamer Theme'
-author: 'John and Mary Doe'
-date: 'Month Day, Year'
+title: "UIUC Beamer Theme"
+shorttitle: "Beamer Slides"
+author: "John and Mary Doe"
+date: "October 26th, 2016"
+section-titles: false    # Provides slide headings
 output: 
   uiucthemes::uiuc_beamer
 ---
 
-# Slide Headings are Great!
+# Section title     
+## Subsection title 
+
+### Frame Title
+
+Frame content 
+
+**Unordered List**
+
+- [University of Illinois at Urbana-Champaign (UIUC)](http://illinois.edu)
+- [Illinois Informatics Institute](http://www.informatics.illinois.edu/)
+
+*Ordered List*
+
+1. <http://smac-group.com>
+2. <http://thecoatlessprofessor.com>
+
+
+#### Title for block box
+
+Content inside of a box 
+
+### \LaTeX
+
+\begin{exampleblock}{Binomial Theorem}
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \label{eq:binom}
+\end{equation} 
+\end{exampleblock}
+
+Hello Equation \ref{eq:binom}
+
+## Code Example
+
+### Code Embedding
+
+```{r}
+# Embedding code
+x = 2
+y = 3
+
+x + y
+```
+
+Inline R code refering to variable in previous code chunk:
+
+`r x`
+
