@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 ^uiucthemes\.png$
 ^uiuc_beamer_slide_example\.png$
+^README\.Rmd$
+^README-.*\.png$
+^\.travis\.yml$
