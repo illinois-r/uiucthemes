@@ -203,23 +203,19 @@ $endif$
 \raggedbottom
 
 $if(section-titles)$
-\AtBeginPart{
-  \let\insertpartnumber\relax
-  \let\partname\relax
-  \frame{\partpage}
-}
-\AtBeginSection{
+\AtBeginSection[]
+{
   \ifbibliography
   \else
     \let\insertsectionnumber\relax
     \let\sectionname\relax
-    \frame{\sectionpage}
+    \begin{frame}
+      \frametitle{On the Agenda}
+      \begin{multicols}{2}
+      \tableofcontents[currentsection]
+      \end{multicols}
+    \end{frame}
   \fi
-}
-\AtBeginSubsection{
-  \let\insertsubsectionnumber\relax
-  \let\subsectionname\relax
-  \frame{\subsectionpage}
 }
 $endif$
 
