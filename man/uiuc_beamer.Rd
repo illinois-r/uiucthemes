@@ -2,7 +2,7 @@
 % Please edit documentation in R/uiuc_beamer.R
 \name{uiuc_beamer}
 \alias{uiuc_beamer}
-\title{Creates an R Markdown UIUC Beamer Themed Slide Deck}
+\title{UIUC Beamer Presentation Template for RMarkdown}
 \usage{
 uiuc_beamer(toc = FALSE, slide_level = 3, incremental = FALSE,
   fig_width = 10, fig_height = 7, fig_crop = TRUE, fig_caption = TRUE,
@@ -43,7 +43,8 @@ include "default", "kable", and "tibble". The "default" method uses
 \code{\link[knitr:kable]{knitr::kable}} function. The "tibble" method uses
 the \pkg{tibble} package to print a summary of the data frame. In addition
 to the named methods you can also pass an arbitrary function to be used
-for printing data frames.}
+for printing data frames. You can disable the df_print behavior entirely
+by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
 
 \item{fonttheme}{Beamer font theme (e.g. "structurebold").}
 
@@ -73,16 +74,19 @@ A modified \code{beamer_presentation} based on the UIUC Beamer Themed
   template
 }
 \description{
-Handles routing of the template in the YML file.
+Generates from an RMarkdown file a Beamer presentation with UIUC colors
+and identity standards.
 }
 \examples{
 \dontrun{
- output:
-   uiucthemes::uiuc_beamer:
-     toc: true
+# Generate slide deck from beamer template
+rmarkdown::draft("slide_deck.Rmd", template = "uiuc_beamer", package = "uiucthemes")
+
+# Compile the document
+rmarkdown::render("slide_deck.Rmd")
 }
 }
 \author{
-RStudio RMarkdown Team (Everything) & JJB (Theme hook)
+RStudio RMarkdown Team (Everything) & JJB (Theme hook + Beamer Theme)
 }
 

@@ -1,47 +1,19 @@
-#' Creates an R Markdown UIUC Beamer Themed Slide Deck
+#' UIUC Beamer Presentation Template for RMarkdown
 #'
-#' Handles routing of the template in the YML file.
-#' @param toc \code{TRUE} to include a table of contents in the output (only
-#'   level 1 headers will be included in the table of contents).
-#' @param slide_level The heading level which defines individual slides. By
-#'   default this is the highest header level in the hierarchy that is followed
-#'   immediately by content, and not another header, somewhere in the document.
-#'   This default can be overridden by specifying an explicit
-#'   \code{slide_level}.
-#' @param incremental \code{TRUE} to render slide bullets incrementally. Note
-#'   that if you want to reverse the default incremental behavior for an
-#'   individual bullet you can precede it with \code{>}. For example:
-#'   \emph{\code{> - Bullet Text}}
-#' @param fig_width Default width (in inches) for figures
-#' @param fig_height Default width (in inches) for figures
-#' @param fig_caption \code{TRUE} to render figures with captions
-#' @param fig_crop \code{TRUE} to automatically apply the \code{pdfcrop} utility
-#'   (if available) to pdf figures
-#' @param dev Graphics device to use for figure output (defaults to pdf)
-#' @param fonttheme Beamer font theme (e.g. "structurebold").
-#' @param highlight Syntax highlighting style. Supported styles include
-#'   "default", "tango", "pygments", "kate", "monochrome", "espresso",
-#'   "zenburn", and "haddock". Pass \code{NULL} to prevent syntax highlighting.
-#' @param keep_tex Keep the intermediate tex file used in the conversion to PDF
-#' @param latex_engine LaTeX engine for producing PDF output. Options are
-#'   "pdflatex", "lualatex", and "xelatex".
-#' @param citation_package The LaTeX package to process citations, \code{natbib}
-#'   or \code{biblatex}. Use \code{none} if neither package is to be used.
-#' @param includes Named list of additional content to include within the
-#'  document (typically created using the \code{\link{includes}} function).
-#' @param md_extensions Markdown extensions to be added or removed from the
-#'  default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
-#'  additional details.
-#' @param pandoc_args Additional command line options to pass to pandoc
+#' Generates from an RMarkdown file a Beamer presentation with UIUC colors
+#' and identity standards.
+#' @inheritParams rmarkdown::beamer_presentation
 #' @return A modified \code{beamer_presentation} based on the UIUC Beamer Themed
 #'   template
 #' @export
-#' @author RStudio RMarkdown Team (Everything) & JJB (Theme hook)
+#' @author RStudio RMarkdown Team (Everything) & JJB (Theme hook + Beamer Theme)
 #' @examples
 #' \dontrun{
-#'  output:
-#'    uiucthemes::uiuc_beamer:
-#'      toc: true
+#' # Generate slide deck from beamer template
+#' rmarkdown::draft("slide_deck.Rmd", template = "uiuc_beamer", package = "uiucthemes")
+#'
+#' # Compile the document
+#' rmarkdown::render("slide_deck.Rmd")
 #' }
 uiuc_beamer <- function(toc = FALSE,
                         slide_level = 3,
@@ -51,6 +23,7 @@ uiuc_beamer <- function(toc = FALSE,
                         fig_crop = TRUE,
                         fig_caption = TRUE,
                         dev = 'pdf',
+                        df_print = "default",
                         fonttheme = "default",
                         highlight = "default",
                         keep_tex = FALSE,
@@ -62,21 +35,22 @@ uiuc_beamer <- function(toc = FALSE,
 
   template <- find_resource("uiuc_beamer", "template.tex")
 
-  base <- rmarkdown::beamer_presentation(template = template,
-                                         toc = toc,
-                                         slide_level = slide_level,
-                                         incremental = incremental,
-                                         fig_width = fig_width,
-                                         fig_height = fig_height,
-                                         fig_crop = fig_crop,
-                                         fig_caption = fig_caption,
-                                         dev = dev,
-                                         fonttheme = fonttheme,
-                                         highlight = highlight,
-                                         keep_tex = keep_tex,
-                                         latex_engine = latex_engine,
-                                         citation_package = citation_package,
-                                         includes = includes,
-                                         md_extensions = md_extensions,
-                                         pandoc_args = pandoc_args)
+  rmarkdown::beamer_presentation(template = template,
+                                 toc = toc,
+                                 slide_level = slide_level,
+                                 incremental = incremental,
+                                 fig_width = fig_width,
+                                 fig_height = fig_height,
+                                 fig_crop = fig_crop,
+                                 fig_caption = fig_caption,
+                                 dev = dev,
+                                 df_print = df_print,
+                                 fonttheme = fonttheme,
+                                 highlight = highlight,
+                                 keep_tex = keep_tex,
+                                 latex_engine = latex_engine,
+                                 citation_package = citation_package,
+                                 includes = includes,
+                                 md_extensions = md_extensions,
+                                 pandoc_args = pandoc_args)
 }
