@@ -72,7 +72,8 @@ $endif$
 \setbeamercolor{normal text}{fg=black}
 \setbeamercolor{title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
 \setbeamercolor{item projected}{fg=white,bg=beamer@UIUCorange}
-%boxes
+
+% Boxes
 \setbeamercolor{block title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
 \setbeamercolor{block body}{fg=blue,bg=beamer@UIUCblue!80}
 \setbeamercolor{title in head/foot}{fg=beamer@UIUCblue,bg=beamer@UIUCgray}
@@ -82,36 +83,16 @@ $endif$
 \setbeamercolor{section in head/foot}{fg=white,bg=beamer@UIUCblue}
 \setbeamercolor{subsection in head/foot}{fg=white,bg=beamer@UIUCorange}
 
-%override title link color
-\makeatletter
-\renewcommand\insertshorttitle[1][]{%
-  \beamer@setupshort{#1}%
-  \let\thanks=\@gobble%
-  \ifnum\c@page=1%
-  \hyperlinkpresentationend{\beamer@insertshort{\usebeamercolor*[fg]{title in head/foot}\beamer@shorttitle}}%
-  \else%
-  \hyperlinkpresentationstart{\beamer@insertshort{\usebeamercolor*[fg]{title in head/foot}\beamer@shorttitle}}%
-  \fi}
-\makeatother
-
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd{\beamer@section}
-  {\def\insertsectionhead{\hyperlink{Navigation\the\c@page}{#1}}}
-  {\def\insertsectionhead{\hyperlink{Navigation\the\c@page}{\usebeamercolor*[fg]{section in head/foot}#1}}}
-  {}{}
-\patchcmd{\beamer@subsection}
-  {\def\insertsubsectionhead{\hyperlink{Navigation\the\c@page}{#1}}}
-  {\def\insertsubsectionhead{\hyperlink{Navigation\the\c@page}{\usebeamercolor*[fg]{subsection in head/foot}#1}}}
-  {}{}
-\makeatother
-
 
 \hypersetup{colorlinks=true,urlcolor=beamer@UIUCblue,linkcolor=beamer@UIUCblue,% link color controls section, subsection, and title
 citecolor = beamer@UIUCorange,
 anchorcolor = beamer@UIUCorange}
 
+%override title link color
+\addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
+\addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
 
+% Setup blocks
 \setbeamercolor{block title}{fg = white, bg = beamer@UIUCblue}
 \setbeamercolor{block body}{fg=black,bg=beamer@UIUCgray2}
 
@@ -264,12 +245,27 @@ $if(subtitle)$
 \subtitle{$subtitle$}
 $endif$
 $if(author)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+\author[
+$if(shortauthor)$
+$shortauthor$
+$else$
+$for(author)$$author$$sep$ \and $endfor$
+$endif$
+]{$for(author)$$author$$sep$ \and $endfor$}
 $endif$
 $if(institute)$
-\institute{$for(institute)$$institute$$sep$ \and $endfor$}
+\institute[
+$if(shortinstitute)$
+$shortinstitute$
 $endif$
-\date{$date$}
+]{$for(institute)$$institute$$sep$ \and $endfor$}
+$endif$
+\date[
+$if(shortdate)$
+$shortdate$
+$else$
+$date$
+$endif$]{$date$}
 
 \begin{document}
 
