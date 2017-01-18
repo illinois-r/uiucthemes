@@ -55,6 +55,18 @@ $endif$
 \usepackage{multirow}
 \usepackage{hyperref}
 
+$if(tikz)$
+\usepackage{tikz}
+$if(tikz-libs)$
+\usetikzlibrary{
+$for(tikz-libs)$
+   $for(tikz-libs)$
+      $tikz-libs$ $sep$,
+   $endfor$
+$endfor$
+}
+$endif$
+$endif$
 
 \usetheme{AnnArbor}
 \usecolortheme{wolverine}
@@ -246,8 +258,8 @@ $if(subtitle)$
 $endif$
 $if(author)$
 \author[
-$if(shortauthor)$
-$shortauthor$
+$if(short-author)$
+$for(short-author)$$short-author$$sep$ \and $endfor$
 $else$
 $for(author)$$author$$sep$ \and $endfor$
 $endif$
@@ -255,17 +267,45 @@ $endif$
 $endif$
 $if(institute)$
 \institute[
-$if(shortinstitute)$
-$shortinstitute$
+$if(short-institute)$
+$for(short-institute)$$short-institute$$sep$ \and $endfor$
 $endif$
-]{$for(institute)$$institute$$sep$ \and $endfor$}
+]{
+$if(department)$
+$for(department)$$department$$sep$ \and $endfor$ \\
+$endif$
+$for(institute)$$institute$$sep$ \and $endfor$
+$if(email)$
+\\ $for(email)$ \href{mailto:$email$}{\nolinkurl{$email$}}$sep$ \and $endfor$
+$endif$
+}
 $endif$
 \date[
-$if(shortdate)$
-$shortdate$
+$if(short-date)$
+$short-date$
 $else$
 $date$
-$endif$]{$date$}
+$endif$]{
+$if(date)$
+$date$
+$if(license)$
+\\ \vspace{5mm}
+$endif$
+$endif$
+$if(license)$
+{\scriptsize $license$}
+$endif$
+}
+
+% Option to fake out the raw_tex plugin and, thus, enabling the embedding of
+% markdown within a column scheme.
+% See:
+% (1) https://groups.google.com/forum/#!msg/pandoc-discuss/vcy7v9Uk95U/LDgWJTHTRR4J
+% (2) http://stackoverflow.com/questions/15142134/slides-with-columns-in-pandoc
+$if(safe-columns)$
+\def\begincols{\begin{columns}}
+\def\endcols{\end{columns}}
+$endif$
 
 \begin{document}
 
@@ -273,10 +313,10 @@ $endif$]{$date$}
 % See: http://tex.stackexchange.com/questions/181032/ignorenonframetext-option-breaks-frame-background-color-option
 \mode<all>{
 \title[
-$if(shorttitle)$
-$shorttitle$
+$if(short-title)$
+$short-title$
 $else$
-Need a ``\texttt{shorttitle}'' for talk!
+Missing ``\texttt{short-title}'' field!
 $endif$
 ]{
 $if(title)$
@@ -289,7 +329,7 @@ $if(title)$
 $title$
 \end{columns}
 $else$
-Need to Fill In Title!
+Need to fill in the ``\texttt{title}'' field!
 $endif$
 }
 }
