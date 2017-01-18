@@ -25,12 +25,18 @@ Within an `RMarkdown` file, add the following:
 
 ```yaml
 ---
-title: "Demo of the UIUC Beamer Theme with RMarkdown"
-shorttitle: "UIUC Theme + RMarkdown"
-author: "James Balamuta"
-institution: "University of Illinois at Urbana-Champaign"
-date: "August 23, 2016"
-section-titles: false
+title: "UIUC Beamer Theme"
+short-title: "Beamer Slides"
+author: "John and Mary Doe"
+short-author: "J & M Doe"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'      # Month DD, YYYY (Main Slide)
+short-date: '`r format(Sys.Date(), "%m/%d/%Y")`' # MM/DD/YYYY (Lower Right)
+institute: "University of Illinois at Urbana-Champaign"
+short-institute: "UIUC"
+department: "Department of Magic"                # Institute must be defined
+license: "Did you license this slide deck? "
+section-titles: false                            # Provides slide headings
+safe-columns: true                               # Enables special latex macros for columns.
 output: 
    uiucthemes::uiuc_beamer
 ---
@@ -45,15 +51,16 @@ Frame content
 **Unordered List**
 
 - [University of Illinois at Urbana-Champaign (UIUC)](http://illinois.edu)
+- [Department of Statistics](http://www.stat.illinois.edu/)
 - [Illinois Informatics Institute](http://www.informatics.illinois.edu/)
 
 *Ordered List*
 
-1. <http://smac-group.com>
-2. <http://thecoatlessprofessor.com>
+1. <http://thecoatlessprofessor.com>
+2. <http://smac-group.com>
 
 
-#### Subtitle inside a frame
+#### Title for block box
 
 Content inside of a box 
 
@@ -67,6 +74,25 @@ Content inside of a box
 \end{exampleblock}
 
 Hello Equation \ref{eq:binom}
+
+### Redux \LaTeX 
+
+This theme supports special LaTeX macros `\beingcols` and `\endcols` that allows
+for markdown to be blended with LaTeX without triggering the [`raw_tex`](http://pandoc.org/MANUAL.html#raw-tex) 
+extension. To enable this feature, the `safe-columns` key in the YML head matter
+must be set equal to `true`.
+
+\begincols
+
+\column{.49\linewidth}
+
+- _Hello!_
+
+\column{.49\linewidth}
+
+1. **Goodbye!**
+
+\endcols
 ```
 
 **Note: You will also need to save the [`ilogo.pdf` file](https://github.com/coatless/uiucthemes/blob/master/inst/rmarkdown/templates/uiuc_beamer/skeleton/ilogo.pdf) to the folder with the RMarkdown document**. The need for this is negated under the instructions given at the end (RStudio creation & using `rmarkdown::draft()`.
