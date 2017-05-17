@@ -3,7 +3,8 @@ Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
 Version: 0.1.1.800
 Authors@R: c(
-  person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre"))
+  person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre")),
+  person("Steven Andrew", "Culpepper" , , "sculpepp@illinois.edu", c("ctb"))
   )
 Description: A set of custom 'R' 'Markdown' templates for documents and
    presentations with the University of Illinois at Urbana-Champaign (UIUC)
