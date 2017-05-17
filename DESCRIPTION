@@ -1,20 +1,19 @@
 Package: uiucthemes
 Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
-Version: 0.1.1
-Date: 2016-10-26
+Version: 0.1.1.800
 Authors@R: c(
   person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre"))
   )
 Description: A set of custom 'R' 'Markdown' templates for documents and
    presentations with the University of Illinois at Urbana-Champaign (UIUC)
    color scheme and identity standards.
-URL: https://github.com/coatless/uiucthemes
+URL: https://github.com/coatless/uiucthemes, http://thecoatlessprofessor.com/projects/uiucthemes/
 BugReports: https://github.com/coatless/uiucthemes/issues
 Depends:
     R (>= 3.0)
 License: MIT + file LICENSE
 Imports:
     rmarkdown (>= 1.1.0)
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Encoding: UTF-8

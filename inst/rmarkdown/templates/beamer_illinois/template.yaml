@@ -1,0 +1,6 @@
+name: >
+ "Illinois" (UIUC) Beamer Slides
+description: >
+ Template for creating Slides using RMarkdown based on the "Illinois" (UIUC)
+ Beamer LaTeX template.
+create_dir: true

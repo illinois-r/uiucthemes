@@ -1,21 +1,21 @@
-#' UIUC Beamer Presentation Template for RMarkdown
+#' "Illinois" (UIUC) Themed Beamer Presentation Template for RMarkdown
 #'
-#' Generates from an RMarkdown file a Beamer presentation with UIUC colors
-#' and identity standards.
+#' Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
+#' colors and identity standards.
 #' @inheritParams rmarkdown::beamer_presentation
-#' @return A modified \code{beamer_presentation} based on the UIUC Beamer Themed
-#'   template
+#' @return A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
+#'  Beamer themed template.
 #' @export
 #' @author RStudio RMarkdown Team (Everything) & JJB (Theme hook + Beamer Theme)
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
-#' rmarkdown::draft("slide_deck.Rmd", template = "uiuc_beamer", package = "uiucthemes")
+#' rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
 #'
 #' # Compile the document
 #' rmarkdown::render("slide_deck.Rmd")
 #' }
-uiuc_beamer <- function(toc = FALSE,
+beamer_illinois <- function(toc = FALSE,
                         slide_level = 3,
                         incremental = FALSE,
                         fig_width = 10,
@@ -33,7 +33,7 @@ uiuc_beamer <- function(toc = FALSE,
                         md_extensions = NULL,
                         pandoc_args = NULL){
 
-  template <- find_resource("uiuc_beamer", "template.tex")
+  template <- find_resource("beamer_illinois", "template.tex")
 
   rmarkdown::beamer_presentation(template = template,
                                  toc = toc,
@@ -53,4 +53,5 @@ uiuc_beamer <- function(toc = FALSE,
                                  includes = includes,
                                  md_extensions = md_extensions,
                                  pandoc_args = pandoc_args)
+
 }

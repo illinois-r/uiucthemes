@@ -1,5 +1,5 @@
 ---
-title: "UIUC Beamer Theme"
+title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
@@ -12,7 +12,7 @@ license: "Did you license this slide deck? "
 section-titles: false                            # Provides slide headings
 safe-columns: true                               # Enables special latex macros for columns.
 output: 
-   uiucthemes::uiuc_beamer
+   uiucthemes::beamer_illinois
 ---
 
 # Section title     
@@ -31,7 +31,7 @@ Frame content
 *Ordered List*
 
 1. <http://thecoatlessprofessor.com>
-2. <http://smac-group.com>
+2. <https://github.com/coatless>
 
 
 #### Title for block box
