@@ -59,7 +59,13 @@ $for(author)$
 $endfor$
 }
 
-$preamble$
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
 
 \begin{document}
 
@@ -81,5 +87,9 @@ $endif$
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 $endif$
+
+$for(include-after)$
+$include-after$
+$endfor$
 
 \end{document}
