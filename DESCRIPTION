@@ -17,4 +17,5 @@ License: MIT + file LICENSE
 Imports:
     rmarkdown (>= 1.1.0)
 RoxygenNote: 6.0.1
+Roxygen: list(markdown = TRUE)
 Encoding: UTF-8

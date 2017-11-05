@@ -1,7 +1,6 @@
 # Borrowed from rticles to avoid having to deal w/ name space issues
 # Not exported
 
-
 find_file <- function(template, file) {
   template <- system.file("rmarkdown", "templates", template, file,
                           package = "uiucthemes")
@@ -14,4 +13,10 @@ find_file <- function(template, file) {
 
 find_resource <- function(template, file) {
   find_file(template, file.path("resources", file))
+}
+
+inherit_pdf_document <- function(...) {
+  fmt <- rmarkdown::pdf_document(...)
+  fmt$inherits <- "pdf_document"
+  fmt
 }

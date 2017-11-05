@@ -2,4 +2,5 @@
 
 export(beamer_illinois)
 export(beamer_orange)
+export(latex_journal_format)
 importFrom(rmarkdown,beamer_presentation)
