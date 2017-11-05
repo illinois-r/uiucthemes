@@ -1,5 +1,5 @@
 
-[![Travis-CI Build Status](https://travis-ci.org/coatless/uiucthemes.svg?branch=master)](https://travis-ci.org/coatless/uiucthemes) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+[![Travis-CI Build Status](https://travis-ci.org/coatless/uiucthemes.svg?branch=master)](https://travis-ci.org/coatless/uiucthemes)[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
 
 UIUC Themes for R Markdown (`uiucthemes`)
 =========================================
@@ -19,8 +19,8 @@ title: "UIUC Beamer Theme"
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'January 26, 2017'      # Month DD, YYYY (Main Slide)
-short-date: '01/26/2017' # MM/DD/YYYY (Lower Right)
+date: 'November 05, 2017'      # Month DD, YYYY (Main Slide)
+short-date: '11/05/2017' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined

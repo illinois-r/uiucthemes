@@ -10,8 +10,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/coatless/uiucthemes.svg?branch=master)](https://travis-ci.org/coatless/uiucthemes)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+[![Travis-CI Build Status](https://travis-ci.org/coatless/uiucthemes.svg?branch=master)](https://travis-ci.org/coatless/uiucthemes)[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
 
 # UIUC Themes for R Markdown (`uiucthemes`)
 
