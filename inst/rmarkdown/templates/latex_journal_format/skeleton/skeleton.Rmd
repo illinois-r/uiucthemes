@@ -1,14 +1,18 @@
 ---
 author:
-  - name: FirstName LastName
-    affiliation: University/Company
+  - name: Leia Organa
+    affiliation: Rebel Alliance
     address: >
       First line
       Second line
     email: name@company.com
-    url: http://rstudio.com
-  - name: Second Author
-    affiliation: Affiliation
+    url: http://www.stat.illinois.edu
+  - name: Han Solo
+    affiliation: Rebel Alliance
+  - name: Luke Skywalker
+    affiliation: Rebel Alliance
+  - name: Lando Calrissian
+    affiliation: Rebel Alliance
 title:
   formatted: "A Capitalized Title: Something about a Package \\pkg{foo}"
   # If you use tex in the formatted title, also supply version without
