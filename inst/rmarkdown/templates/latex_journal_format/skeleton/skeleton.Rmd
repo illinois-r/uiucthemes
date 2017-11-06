@@ -30,8 +30,6 @@ volume: 1
 semester: Fall
 year: 2017
 class-url: "https://go.illinois.edu/stat432"
-preamble: >
-  \usepackage{amsmath}
 output: uiucthemes::latex_journal_format
 ---
 
