@@ -20,3 +20,11 @@ inherit_pdf_document <- function(...) {
   fmt$inherits <- "pdf_document"
   fmt
 }
+
+load_resources_if_missing <- function(template_name, resources) {
+  for (template_file in resources)
+    if (!file.exists(template_file))
+      file.copy(system.file("rmarkdown", "templates", template_name, "skeleton",
+                            template_file, package="uiucthemes"),
+                ".")
+}

@@ -35,6 +35,9 @@ beamer_illinois <- function(toc = FALSE,
 
   template <- find_resource("beamer_illinois", "template.tex")
 
+  load_resources_if_missing("beamer_illinois",
+                            c("ilogo.pdf"))
+
   rmarkdown::beamer_presentation(template = template,
                                  toc = toc,
                                  slide_level = slide_level,
@@ -93,6 +96,9 @@ beamer_orange <- function(toc = FALSE,
                             pandoc_args = NULL){
 
   template <- find_resource("beamer_orange", "template.tex")
+
+  load_resources_if_missing("beamer_orange",
+                            c("ilogo.pdf"))
 
   rmarkdown::beamer_presentation(template = template,
                                  toc = toc,
