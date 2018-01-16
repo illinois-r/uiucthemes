@@ -1,7 +1,7 @@
 Package: uiucthemes
 Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
-Version: 0.1.1.800
+Version: 0.2.0
 Authors@R: c(
   person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre")),
   person("Steven Andrew", "Culpepper" , , "sculpepp@illinois.edu", c("ctb")),
