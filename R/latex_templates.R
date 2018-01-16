@@ -36,6 +36,9 @@ latex_journal_format = function(..., keep_tex = TRUE, citation_package = 'natbib
     ..., template = template, keep_tex = keep_tex, citation_package = citation_package
   )
 
+  base$pandoc$toc = FALSE
+  base$pandoc$number_sections = FALSE
+
   base$knitr$opts_chunk$prompt = FALSE   # changed from TRUE
   base$knitr$opts_chunk$comment = '# '   # default to one hashmark
   base$knitr$opts_chunk$highlight = TRUE # changed as well
@@ -45,7 +48,7 @@ latex_journal_format = function(..., keep_tex = TRUE, citation_package = 'natbib
   base$knitr$opts_chunk$fig.height = 3.675 # 4.9 * 3:4
   base$knitr$opts_chunk$fig.align = "center"
 
-  for (template_file in c("jss.cls", "jss.bst", "stat432-logo.png"))
+  for (template_file in c("jss.cls", "jss.bst", "stat432-logo.png", "bibliography.bib"))
     if (!file.exists(template_file))
       file.copy(system.file("rmarkdown", "templates", "pdf", "skeleton",
                             template_file, package="uiucthemes"),

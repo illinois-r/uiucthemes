@@ -1,4 +1,13 @@
 ---
+title:
+  formatted: "A Descriptive Title Here: Be Creative"
+abstract: |
+          | This is the abstract. It should probably be at most about five 
+          | sentences. The abstract should briefly explain what you are doing,
+          | why you are doing it, and what you have found. Reading only the 
+          | abstract, the reader should have a good idea about what to expect
+          | from the rest of the document.
+date: "December 13, 2017"
 author:
   - name: Leia Organa
     affiliation: Rebel Alliance
@@ -13,43 +22,227 @@ author:
     affiliation: Rebel Alliance
   - name: Lando Calrissian
     affiliation: Rebel Alliance
-title:
-  formatted: "A Capitalized Title: Something about a Package \\pkg{foo}"
-  # If you use tex in the formatted title, also supply version without
-  plain:     "A Capitalized Title: Something about a Package foo"
-  # For running headers, if needed
-  short:     "\\pkg{foo}: A Capitalized Title"
-abstract: >
-  The abstract of the article.
 keywords:
   # at least one keyword must be supplied
-  formatted: [keywords, not capitalized, "\\proglang{Java}"]
-  plain:     [keywords, not capitalized, Java]
+  formatted: ["statistical learning", "r", "keyword?"]
+bibliography: bibliography.bib
 journal: Annals of STAT 432
 volume: 1
 semester: Fall
 year: 2017
 class-url: "https://go.illinois.edu/stat432"
+link-citations: true
+linkcolor: Cerulean
+urlcolor: Cerulean
+citecolor: Cerulean
+fontsize: 10pt
 output: uiucthemes::latex_journal_format
 ---
 
+```{r set-options, include = FALSE}
+# setting some default chunk options
+# figures will be centered
+# code will not be displayed unless `echo = TRUE` is set for a chunk
+# messages are suppressed
+# warnings are suppressed
+knitr::opts_chunk$set(fig.align = "center", echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r load-packages, FALSE}
+# install.packages(c("knitr", "kableExtra", "caret", "ISLR"))
+# all packages needed should be loaded in this chunk
+library(knitr)
+library(kableExtra)
+library(caret)
+```
+
 # Introduction
 
-This template demonstrates some of the basic latex you'll need to know to create a JSS article.
+The **introduction** should discuss and setup a real-world problem. Essentially, you need to motivate why the analysis that you're about to do should be done. Why is a model useful in this situation? What is the goal of this model? The introduction should also provide enough background on the subject area for a reader to understand your analysis. Do not assume your reader knows anything about the subject area that your data comes from. If the reader does not understand your data, there is no way the reader will understand your motivation.
 
-## Code formatting
+This document will walk you through some of the necessary steps of formatting your report. Do not mistake the length of this document as an example of the length of a proper report. Length is not important. Communicating your results in a concise but complete manner is important.
 
-Don't use markdown, instead use the more precise latex commands:
+# Materials and Methods
 
-* \proglang{Java}
-* \pkg{plyr}
-* \code{print("abc")}
+The **materials and methods** section should discuss how you solved your problem. The material that you are using is the data you have selected. The methods that you are using are those learned in class. This section should contain the bulk of your "work." This section will contain the bulk of the `R` code that is used to generate the results. Your `R` code is not expected to be perfect idiomatic `R`, but it is expected to be understood by a reader without too much effort. The majority of your code should be suppressed from the final report, but consider displaying code that helps illustrate the analysis you performed, for example, training of models.
 
-# R code
-
-Can be inserted in regular R markdown blocks.
-
-```{r}
-x <- 1:10
-x
+```{r gbm-grid, eval = FALSE, echo = TRUE}
+gbm_grid = expand.grid(interaction.depth = c(1, 2, 3),
+                       n.trees = (1:30) * 100,
+                       shrinkage = c(0.1, 0.3),
+                       n.minobsinnode = 20)
 ```
+
+```{r gbm-tune, eval = FALSE, echo = TRUE}
+sim_gbm_mod = train(y ~ ., data = sim_trn, method = "gbm",
+                    trControl = trainControl(method = "cv", number = 5),
+                    tuneGrid = gbm_grid, verbose = FALSE)
+```
+
+Consider adding subsections in this section. One potential set of subsections could be **data** and **models**. The data section would describe your data. What is it? Where did it come from? How will it be useful in answering your problem? What if any preprocessing have you done to it? Provide references to information about the data, but explain enough that your reader does not need to utilize them. The models section would describe the modeling methods that you will consider, as well as strategies for comparison.
+
+## `R` Code and `rmarkdown`
+
+An important part of the report is communicating results in a well-formatted manner. This template document should help a lot with that task. Some thoughts on using `R` and `rmarkdown`:
+
+- Chunks are set to not echo by default in this document.
+- Include at least one chunk that is echoed, else, this template may break.
+- Consider naming your chunks. This will be necessary for referencing chunks that create tables or figures.
+- One chunk per table or figure!
+- Tables should be created using `knitr::kable()`.
+- Consider using `kableExtra()` for better presentation of tables. (Examples in this document.)
+- Caption all figures and tables. (Examples in this document.)
+- Use the `img/` sub-directory for any external images.
+- Use the `data/` sub-directory for any external data.
+
+```{r young-fisher, out.width = "200px", fig.cap = "A photograph of R. A. Fisher in his younger years."}
+knitr::include_graphics("img/youngfisher.jpg")
+```
+
+## LaTeX
+
+While you will not directly work with LaTeX, since your final report will be a pdf, you will need to have LaTeX installed.
+
+- [MiKTeX (Windows)](https://miktex.org/)
+- [MacTeX (OSX)](http://www.tug.org/mactex/)
+- [TeX Live (Linux)](http://www.tug.org/texlive/)
+
+If you are interested, some details on working with TeX can be found in [this guide by UIUC Mathematics Professor A.J. Hildebrand ](https://faculty.math.illinois.edu/~hildebr/tex/latex-start.html).
+
+With `rmarkdown`, LaTeX can be used inline, like this, $a ^ 2 + b ^ 2 = c ^ 2$, or using display mode,
+
+$$
+\mathbb{E}_{X, Y} \left[ (Y - f(X)) ^ 2 \right] = \mathbb{E}_{X} \mathbb{E}_{Y \mid X} \left[ ( Y - f(X) ) ^ 2 \mid X = x \right]
+$$
+
+For examples of LaTeX code, you can right click on any equation in [`R4SL`](https://daviddalpiaz.github.io/r4sl/) to obtain the LaTeX used to generate.
+
+You are not required to use BibTeX for references, but if you are familiar, please consider doing so. Otherwise, you can simply manually cite your references. But with BibTeX, it is extremely easy. For example, we could reference the `rmarkdown` paper [@allaire2015rmarkdown] or the tidy data paper. [@wickham2014tidy] Some details can be found in the [`bookdown` book](https://bookdown.org/yihui/bookdown/citations.html). Also, hint, [Google Scholar](https://scholar.google.com/) makes obtaining BibTeX reference extremely easy.
+
+Because we're using LaTeX to render the final document, you will have no control over the placement of tables and figures. Be OK with this! (If you really need control, see the first image of this document.) Since they'll essentially appear where LaTeX decides to put them, we need to be able to reference them. For example, we could talk about Figure \@ref(fig:space-advert), which talks about space advertising. Notice that this is numbered automatically, but internally referenced using the chunk name.
+
+```{r old-fisher, out.width = "100px", fig.cap = "A photograph of R. A. Fisher in his older years. Originally a larger image, but made smaller through the use of chunk options."}
+knitr::include_graphics("img/fisher.jpg")
+```
+
+```{r simulation}
+get_sim_data = function(f, sample_size = 100) {
+  x = runif(n = sample_size, min = 0, max = 1)
+  y = rnorm(n = sample_size, mean = f(x), sd = 0.3)
+  data.frame(x, y)
+}
+
+f = function(x) {
+  x ^ 2
+}
+
+set.seed(1)
+sim_data = get_sim_data(f)
+
+fit_0 = lm(y ~ 1,                   data = sim_data)
+fit_1 = lm(y ~ poly(x, degree = 1), data = sim_data)
+fit_2 = lm(y ~ poly(x, degree = 2), data = sim_data)
+fit_9 = lm(y ~ poly(x, degree = 9), data = sim_data)
+```
+
+# Results
+
+The **results** section should contain numerical or graphical summaries of your results. What are the results of applying your selected methods to your materials? Consider reporting a "final" or "best" model you have chosen. There is not necessarily one, singular correct model, but certainly some methods and models are better than others in certain situations. In this section you should provide evidence that your final choice of model is a good one. 
+
+```{r auto-data}
+kable(head(ISLR::Auto), format = "latex", caption = "An example table.", booktabs = TRUE) %>%
+  kable_styling(latex_options = c("striped", "scale_down"))
+```
+
+```{r mod-degrees, fig.height = 6, fig.width = 9, fig.cap = "This is a caption."}
+set.seed(42)
+plot(y ~ x, data = sim_data, col = "grey", pch = 20,
+     main = "Four Polynomial Models fit to a Simulated Dataset")
+grid()
+grid = seq(from = 0, to = 2, by = 0.01)
+lines(grid, f(grid), col = "black", lwd = 3)
+lines(grid, predict(fit_0, newdata = data.frame(x = grid)), col = "dodgerblue",  lwd = 2, lty = 2)
+lines(grid, predict(fit_1, newdata = data.frame(x = grid)), col = "firebrick",   lwd = 2, lty = 3)
+lines(grid, predict(fit_2, newdata = data.frame(x = grid)), col = "springgreen", lwd = 2, lty = 4)
+lines(grid, predict(fit_9, newdata = data.frame(x = grid)), col = "darkorange",  lwd = 2, lty = 5)
+
+legend("topleft", 
+       c("y ~ 1", "y ~ poly(x, 1)", "y ~ poly(x, 2)",  "y ~ poly(x, 9)", "truth"), 
+       col = c("dodgerblue", "firebrick", "springgreen", "darkorange", "black"), lty = c(2, 3, 4, 5, 1), lwd = 2)
+```
+
+Notice that captioning of tables is done using `kable()` while captioning of figures is done using chunk options.
+
+```{r simp-vs-comp, fig.height = 4, fig.width = 12, fig.cap = "This is a another caption. Your captions should probably be more descriptive."}
+par(mfrow = c(1, 3))
+
+set.seed(430)
+sim_data_1 = get_sim_data(f)
+sim_data_2 = get_sim_data(f)
+sim_data_3 = get_sim_data(f)
+fit_0_1 = lm(y ~ 1, data = sim_data_1)
+fit_0_2 = lm(y ~ 1, data = sim_data_2)
+fit_0_3 = lm(y ~ 1, data = sim_data_3)
+fit_9_1 = lm(y ~ poly(x, degree = 9), data = sim_data_1)
+fit_9_2 = lm(y ~ poly(x, degree = 9), data = sim_data_2)
+fit_9_3 = lm(y ~ poly(x, degree = 9), data = sim_data_3)
+
+plot(y ~ x, data = sim_data_1, col = "grey", pch = 20, main = "Simulated Dataset 1")
+grid()
+grid = seq(from = 0, to = 2, by = 0.01)
+lines(grid, predict(fit_0_1, newdata = data.frame(x = grid)), col = "dodgerblue", lwd = 2, lty = 2)
+lines(grid, predict(fit_9_1, newdata = data.frame(x = grid)), col = "darkorange", lwd = 2, lty = 5)
+legend("topleft", c("y ~ 1", "y ~ poly(x, 9)"), col = c("dodgerblue", "darkorange"), lty = c(2, 5), lwd = 2)
+
+plot(y ~ x, data = sim_data_2, col = "grey", pch = 20, main = "Simulated Dataset 2")
+grid()
+grid = seq(from = 0, to = 2, by = 0.01)
+lines(grid, predict(fit_0_2, newdata = data.frame(x = grid)), col = "dodgerblue", lwd = 2, lty = 2)
+lines(grid, predict(fit_9_2, newdata = data.frame(x = grid)), col = "darkorange", lwd = 2, lty = 5)
+legend("topleft", c("y ~ 1", "y ~ poly(x, 9)"), col = c("dodgerblue", "darkorange"), lty = c(2, 5), lwd = 2)
+
+plot(y ~ x, data = sim_data_3, col = "grey", pch = 20, main = "Simulated Dataset 3")
+grid()
+grid = seq(from = 0, to = 2, by = 0.01)
+lines(grid, predict(fit_0_3, newdata = data.frame(x = grid)), col = "dodgerblue", lwd = 2, lty = 2)
+lines(grid, predict(fit_9_3, newdata = data.frame(x = grid)), col = "darkorange", lwd = 2, lty = 5)
+legend("topleft", c("y ~ 1", "y ~ poly(x, 9)"), col = c("dodgerblue", "darkorange"), lty = c(2, 5), lwd = 2)
+```
+
+# Discussion
+
+The **discussion** section should contain discussion of your results. This should also frame your results in the context of the data. What do your results mean? Results are often just numbers, here you need to explain what they tell you about the problem you are trying to solve. The results section tells the reader what the results are. The discussion section tells the reader why those results matter. Since the results are created in the results section, but they are being discussed in the discussion section, you will need to reference tables and figures from the results section. For example, we could talk about Table \@ref(tab:auto-data), which displays an automobile dataset. Or we could discuss Figure \@ref(fig:mod-degrees), which displays multiple models fit to the same dataset. Figure \@ref(fig:simp-vs-comp) shows two models of different complexities fit to different simulated datasets.
+
+To demonstrate that you understand course concepts, consider spending some time discussing:
+
+- Was your final model a linear or non-linear method?
+- Was your final model a parametric or non-parametric method?
+- Was your final model generative or discriminant?
+
+Perhaps compare these details to some other methods you considered.
+
+# Conclusion
+
+The **conclusion** should be a brief recap of what you did, why you did it, and what you found. Submission of your report will be considered a submission to the journal *Annals of STAT 432* and the grading process will be considered part of the "peer review" process. If a report is well written, uses thoughtful and throughout analysis, and is sufficiently interesting you may be asked to have your work "published" as an example for future students. All group members will have to agree to publication. You may also be asked to make edits before publication, but you should be sure to **proofread** and **spellcheck** your work before your initial submission.
+
+\newpage
+
+# Appendix
+
+The **appendix** section should contain any additional code, tables, and graphics that are not explicitly referenced in the narrative of the report.
+
+```{r hitters-data}
+kable(head(ISLR::Hitters, 20), format = "latex", 
+      caption = "This is an example of a table in the Appendix. Notice that it is way too big, and has way too much information. We use $\\texttt{kableExtra()}$ to shrink it down, but even then, no one would actually read this table.", 
+      booktabs = TRUE) %>%
+  kable_styling(latex_options = c("striped", "scale_down"))
+```
+
+```{r wage-data}
+kable(head(ISLR::Wage, 20), format = "latex", caption = "This is another example of a ridiculous table. Notice that it is automatically numbered.", booktabs = TRUE) %>%
+  kable_styling(latex_options = c("striped", "scale_down"))
+```
+
+\newpage
+
+# References
