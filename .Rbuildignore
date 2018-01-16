@@ -1,7 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^uiucthemes\.png$
-^uiuc_beamer_slide_example\.png$
+^beamer_illinois_slide_example\.png$
 ^README\.Rmd$
 ^README-.*\.png$
 ^\.travis\.yml$
