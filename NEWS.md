@@ -14,6 +14,9 @@
 - Developed a template off of jss style to be used for final reports with
   Dr. David Dalpiaz. This will be updated at a later point to use bookdown's
   `pdf_document2()` option.
+- Added a non-exported helper function `load_resources_if_missing()` that
+  loads any required resources into the document's working directory if they 
+  are missing (e.g. `ilogo.pdf`).
 
 # uiucthemes 0.1.1
 
