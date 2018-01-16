@@ -28,6 +28,7 @@ Useful links:
 Other contributors:
 \itemize{
   \item Steven Andrew Culpepper \email{sculpepp@illinois.edu} [contributor]
+  \item David Dalpiaz \email{dalpiaz2@illinois.edu} [contributor]
 }
 
 }

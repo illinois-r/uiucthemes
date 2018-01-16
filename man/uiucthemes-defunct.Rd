@@ -17,7 +17,7 @@ These functions have been removed from the uiucthemes package.
 \section{Details}{
 
 \tabular{rl}{
-  \code{uiuc_beamer} \tab has been removed in favor of \code{\link{beamer_illinois}}\cr
+\code{uiuc_beamer} \tab has been removed in favor of \code{\link{beamer_illinois}}\cr
 }
 }
 

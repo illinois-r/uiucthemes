@@ -73,7 +73,7 @@ additional details.}
 }
 \value{
 A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
- Beamer themed template.
+Beamer themed template.
 }
 \description{
 Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
@@ -85,9 +85,9 @@ colors and identity standards with a focus on "Orange" and "White".
 rmarkdown::draft("slide_deck.Rmd", template = "beamer_orange", package = "uiucthemes")
 
 # Compile the document
-rmarkdown::render("slide_deck.Rmd")
+rmarkdown::render("slide_deck/slide_deck.Rmd")
 }
 }
 \author{
-RStudio RMarkdown Team (Everything), JJB (Theme hook), Prof. Steven A Culpepper (Beamer Theme)
+RStudio RMarkdown Team (Everything), JJB (Theme hook), Prof. Steven A Culpepper (Beamer Orange Theme)
 }

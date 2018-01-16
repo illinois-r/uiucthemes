@@ -13,7 +13,7 @@
 #' rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
 #'
 #' # Compile the document
-#' rmarkdown::render("slide_deck.Rmd")
+#' rmarkdown::render("slide_deck/slide_deck.Rmd")
 #' }
 beamer_illinois <- function(toc = FALSE,
                         slide_level = 3,
@@ -65,14 +65,14 @@ beamer_illinois <- function(toc = FALSE,
 #'  Beamer themed template.
 #' @export
 #' @author
-#' RStudio RMarkdown Team (Everything), JJB (Theme hook), Prof. Steven A Culpepper (Beamer Theme)
+#' RStudio RMarkdown Team (Everything), JJB (Theme hook), Prof. Steven A Culpepper (Beamer Orange Theme)
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
 #' rmarkdown::draft("slide_deck.Rmd", template = "beamer_orange", package = "uiucthemes")
 #'
 #' # Compile the document
-#' rmarkdown::render("slide_deck.Rmd")
+#' rmarkdown::render("slide_deck/slide_deck.Rmd")
 #' }
 beamer_orange <- function(toc = FALSE,
                             slide_level = 3,
