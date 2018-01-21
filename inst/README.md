@@ -7,12 +7,18 @@ downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pk
 
 # UIUC Themes for R Markdown (`uiucthemes`)
 
-The **uiucthemes** package includes my collection of UIUC themed
-templates.
+The **uiucthemes** package includes my collection of UIUC-themed
+templates for presentations, journal articles, and exam templates.
 
-Presently, only the UIUC Beamer Theme is embedded within the package.
+Included in the package are:
 
-## UIUC Beamer Theme - Example
+  - `beamer_illinois`: Illinois colored header boxes
+  - `beamer_orange`: Minimialist slides with a color preference to
+    orange.
+  - `latex_journal_report`: initial implementation of a journal entry
+    for a class.
+
+## `beamer_illinois` - Example
 
 Within an `RMarkdown` file, add the following:
 
@@ -69,12 +75,6 @@ Content inside of a box
 Hello Equation \ref{eq:binom}
 ```
 
-**Note: You will also need to save the [`ilogo.pdf`
-file](https://github.com/coatless/uiucthemes/blob/master/inst/rmarkdown/templates/uiuc_beamer/skeleton/ilogo.pdf)
-to the folder with the RMarkdown document**. The need for this is
-negated under the instructions given at the end (RStudio creation &
-using `rmarkdown::draft()`.
-
 This generates:
 
 ![](beamer_illinois_slide_example.png)
@@ -109,9 +109,7 @@ To use **uiucthemes** from RStudio:
 <!-- end list -->
 
 ``` r
-install.packages("devtools")
-devtools::install_github("rstudio/rmarkdown")
-devtools::install_github("coatless/uiucthemes")
+install.packages(c("rmarkdown","uiucthemes"))
 ```
 
 3)  Use the **New R Markdown** dialog to create an article from one of
@@ -130,9 +128,7 @@ devtools::install_github("coatless/uiucthemes")
 <!-- end list -->
 
 ``` r
-install.packages("devtools")
-devtools::install_github("rstudio/rmarkdown")
-devtools::install_github("coatless/uiucthemes")
+install.packages(c("rmarkdown","uiucthemes"))
 ```
 
 3)  Use the `rmarkdown::draft` function to create
@@ -141,5 +137,15 @@ articles:
 <!-- end list -->
 
 ``` r
-rmarkdown::draft("slide_deck.Rmd", template = "uiuc_beamer", package = "uiucthemes")
+rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
+```
+
+### Using a development version of `uiucthemes`
+
+To access the development version of `uiucthemes`, e.g. not on CRAN,
+please use:
+
+``` r
+install.packages("devtools")
+devtools::install_github("coatless/uiucthemes")
 ```
