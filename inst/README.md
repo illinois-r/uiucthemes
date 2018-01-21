@@ -22,8 +22,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'January 15, 2018'      # Month DD, YYYY (Main Slide)
-short-date: '01/15/2018' # MM/DD/YYYY (Lower Right)
+date: 'January 21, 2018'      # Month DD, YYYY (Main Slide)
+short-date: '01/21/2018' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
