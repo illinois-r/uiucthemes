@@ -81,7 +81,7 @@ Hello Equation \ref{eq:binom}
 
 This generates:
 
-![](beamer_illinois_slide_example.png)
+![](tools/readme/beamer_illinois_slide_example.png)
 
 
 ## Materials Referenced
@@ -111,7 +111,7 @@ install.packages(c("rmarkdown","uiucthemes"))
 
 3) Use the **New R Markdown** dialog to create an article from one of the templates:
 
-![New R Markdown](uiucthemes.png)
+![New R Markdown](tools/readme/uiucthemes.png)
     
     
 ### Using `uiucthemes` outside of RStudio

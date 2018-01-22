@@ -20,6 +20,7 @@
     2. Orange and Blue colors have been updated... 
         - **Orange**: `#f47f24` / `rgb(244,127,36)` to `#d75536` / `rgb(215,85,54)`
         - **Blue**: `#003c7d` / `rgb(0,60,125)` to `#1d2639` / `rgb(29,38,57)`
+- Moved README images to `tools/readme` to ensure images appear on CRAN.
 
 ## DEPRECATED
 
