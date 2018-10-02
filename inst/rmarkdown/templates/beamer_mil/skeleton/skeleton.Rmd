@@ -1,0 +1,92 @@
+---
+title: "Introduction to Bloomberg Professional"
+author: "Margolis Market Information Lab "
+department: "Department of Finance" # Department
+institute: "University of Illinois at Urbana-Champaign"
+date: '`r format(Sys.Date(), "%B %d, %Y")`' # (Main Slide)
+short-title: "BLP101" # (Lower Middle)
+short-author: "Margolis Market Information Lab (MIL)" # (Lower Left)
+short-date: "Gies College of Business"  # (Lower Right)
+license: "Do not duplicate or distribute without permission"  # License
+section-titles: false # Section Slides
+toc: true # Table of content
+safe-columns: true  # Special columns
+output:
+  uiucthemes::beamer_mil
+---
+
+# Section title
+## Subsection title 
+
+### Frame Title
+Frame content
+
+**Unordered List**
+
+- [Market Information Lab](https://business.illinois.edu/mil/)
+- [Gies College of Business](https://business.illinois.edu/)
+- [University of Illinois at Urbana-Champaign (UIUC)](http://illinois.edu)
+
+*Ordered List*
+
+1. <https://business.illinois.edu/mil/>
+2. <https://business.illinois.edu/finance/>
+
+# Section title
+## Subsection title 
+
+### Frame Title
+Frame content 
+
+#### Title for block box
+
+Content inside of a box 
+
+### \LaTeX
+
+\begin{exampleblock}{Binomial Theorem}
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \label{eq:binom}
+\end{equation} 
+\end{exampleblock}
+
+Hello Equation \ref{eq:binom}
+
+### Redux \LaTeX 
+
+This theme supports special LaTeX macros `\beingcols` and `\endcols` that allows
+for markdown to be blended with LaTeX without triggering the [`raw_tex`](http://pandoc.org/MANUAL.html#raw-tex) 
+extension. To enable this feature, the `safe-columns` key in the YML head matter
+must be set equal to `true`.
+
+\begincols
+
+\column{.49\linewidth}
+
+- _Hello!_
+
+\column{.49\linewidth}
+
+1. **Goodbye!**
+
+\endcols
+
+# Section title
+
+## Code Example
+
+### Code Embedding
+
+```{r}
+# Embedding code
+x = 2
+y = 3
+
+x + y
+```
+
+Inline R code refering to variable in previous code chunk:
+
+`r x`
+

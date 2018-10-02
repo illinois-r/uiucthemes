@@ -2,5 +2,6 @@
 
 export(beamer_illinois)
 export(beamer_orange)
+export(beamer_mil)
 export(latex_journal_format)
 importFrom(rmarkdown,beamer_presentation)
