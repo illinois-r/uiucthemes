@@ -14,13 +14,17 @@ knitr::opts_chunk$set(
 
 # UIUC Themes for R Markdown (`uiucthemes`)
 
-The **uiucthemes** package includes my collection of UIUC-themed templates for presentations, journal articles, and exam templates.
+The `uiucthemes` package includes a collection of UIUC-themed templates for
+presentations, journal articles, and exam templates.
 
 Included in the package are:
 
 - `beamer_illinois`: Illinois colored header boxes
 - `beamer_orange`: Minimialist slides with a color preference to orange.
+- `beamer_mil`: Beamer Market Information Lab (MIL)
 - `latex_journal_report`: initial implementation of a journal entry for a class.
+
+Screenshots of each template are included in package overview vignette.
 
 ## `beamer_illinois` - Example
 
@@ -116,7 +120,8 @@ install.packages(c("rmarkdown","uiucthemes"))
     
 ### Using `uiucthemes` outside of RStudio
 
-1) Install [pandoc](http://johnmacfarlane.net/pandoc/) using the [instructions for your platform](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md).
+1) Install [pandoc](http://johnmacfarlane.net/pandoc/) using the
+   [instructions for your platform](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md).
 
 2) Install the **rmarkdown** and **uiucthemes** packages:
 

@@ -7,16 +7,19 @@ downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pk
 
 # UIUC Themes for R Markdown (`uiucthemes`)
 
-The **uiucthemes** package includes my collection of UIUC-themed
-templates for presentations, journal articles, and exam templates.
+The `uiucthemes` package includes a collection of UIUC-themed templates
+for presentations, journal articles, and exam templates.
 
 Included in the package are:
 
   - `beamer_illinois`: Illinois colored header boxes
   - `beamer_orange`: Minimialist slides with a color preference to
     orange.
+  - `beamer_mil`: Beamer Market Information Lab (MIL)
   - `latex_journal_report`: initial implementation of a journal entry
     for a class.
+
+Screenshots of each template are included in package overview vignette.
 
 ## `beamer_illinois` - Example
 
@@ -28,8 +31,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'January 22, 2018'      # Month DD, YYYY (Main Slide)
-short-date: '01/22/2018' # MM/DD/YYYY (Lower Right)
+date: 'October 03, 2018'      # Month DD, YYYY (Main Slide)
+short-date: '10/03/2018' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
