@@ -1,6 +1,6 @@
 name: >
- "Illinois" (UIUC) Beamer Slides
+ Illinois Blue and Orange Beamer Theme
 description: >
- Template for creating Slides using RMarkdown based on the "Illinois" (UIUC)
- Beamer LaTeX template.
+ Template for creating slides using RMarkdown based on the Illinois Blue and
+ Orange Beamer LaTeX template.
 create_dir: true
