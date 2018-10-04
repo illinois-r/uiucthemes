@@ -42,3 +42,7 @@ Mueller, Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver K
 (2017). rticles: Article Formats for R Markdown. R package version 0.4.1.
 \url{https://CRAN.R-project.org/package=rticles}
 }
+\author{
+JSS Editorial Staff for the Journal format, RStudio for \code{jss_article},
+James Balamuta for the theme hook, and David Dalpiaz for skeleton content
+}

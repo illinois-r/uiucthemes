@@ -14,6 +14,10 @@
 #' This format is largely based off of the [`rticles`](https://github.com/rstudio/rticles)
 #' of `jss_article`.
 #'
+#' @author
+#' JSS Editorial Staff for the Journal format, RStudio for `jss_article`,
+#' James Balamuta for the theme hook, and David Dalpiaz for skeleton content
+#'
 #' @examples
 #'
 #' \dontrun{
@@ -50,7 +54,7 @@ latex_journal_format = function(..., keep_tex = TRUE, citation_package = 'natbib
 
   load_resources_if_missing("latex_journal_format",
                             c("jss.cls", "jss.bst",
-                              "stat432-logo.png", "bibliography.bib"))
+                              "stat-logo.png", "bibliography.bib"))
 
   base
 }

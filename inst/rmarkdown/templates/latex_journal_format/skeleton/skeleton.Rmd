@@ -7,7 +7,7 @@ abstract: |
           | why you are doing it, and what you have found. Reading only the 
           | abstract, the reader should have a good idea about what to expect
           | from the rest of the document.
-date: "December 13, 2017"
+date: "October 3, 2018"
 author:
   - name: Leia Organa
     affiliation: Rebel Alliance
@@ -24,13 +24,13 @@ author:
     affiliation: Rebel Alliance
 keywords:
   # at least one keyword must be supplied
-  formatted: ["statistical learning", "r", "keyword?"]
+  formatted: ["statistics", "r", "keyword?"]
 bibliography: bibliography.bib
-journal: Annals of STAT 432
+journal: Annals of STAT XXX
 volume: 1
 semester: Fall
-year: 2017
-class-url: "https://go.illinois.edu/stat432"
+year: 2018
+class-url: "https://stat.illinois.edu"
 link-citations: true
 linkcolor: Cerulean
 urlcolor: Cerulean
