@@ -1,11 +1,20 @@
 Package: uiucthemes
 Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
-  person("James", "Balamuta" , , "balamut2@illinois.edu", c("aut", "cre")),
-  person("Steven Andrew", "Culpepper" , , "sculpepp@illinois.edu", c("ctb")),
-  person("David", "Dalpiaz" , , "dalpiaz2@illinois.edu", c("ctb"))
+  person("James", "Balamuta", 
+         email = "balamut2@illinois.edu", role = c("aut", "cre"),
+         comment = c(ORCID = "0000-0003-2826-8458")),
+  person("Steven Andrew", "Culpepper" ,
+         email = "sculpepp@illinois.edu", role = "ctb",
+         comment = "Provided the Minimal Orange Beamer Theme"),
+  person("David", "Dalpiaz" ,
+         email = "dalpiaz2@illinois.edu", role = "ctb",
+         comment = "Collaborated on the LaTeX Journal Theme"),
+  person("Jose Luis", "Rodriguez",
+         email = "jrodriguezorjuela@luc.edu", role = "ctb",
+         comment = "Provided the Market Information Lab (MIL) Beamer Theme")
   )
 Description: A set of custom 'R' 'Markdown' templates for documents and
    presentations with the University of Illinois at Urbana-Champaign (UIUC)
@@ -17,6 +26,9 @@ Depends:
 License: MIT + file LICENSE
 Imports:
     rmarkdown (>= 1.1.0)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

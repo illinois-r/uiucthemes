@@ -3,7 +3,6 @@
 \name{uiucthemes-defunct}
 \alias{uiucthemes-defunct}
 \alias{uiuc_beamer}
-\alias{uiuc_beamer}
 \title{Defunct functions in the uiucthemes package}
 \usage{
 uiuc_beamer(...)
