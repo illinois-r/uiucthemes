@@ -1,3 +1,17 @@
+# uiucthemes 0.2.1
+
+## NEW
+
+- Added the `beamer_mil()` template for the 
+  [Market Information Lab (MIL)](https://business.illinois.edu/mil/) @ UIUC
+  created by [Jose Luis Rodriguez](https://www.linkedin.com/in/jlroo)
+- Added a vignette that contains screenshots of each template.
+
+## CHANGES
+
+- Modified template naming scheme so that templates are grouped by "Illinois".
+- Modified skeleton template of `latex_journal_format` to be more generic.
+
 # uiucthemes 0.2.0
 
 ## NEW
