@@ -2,14 +2,15 @@
 % Please edit documentation in R/beamer_templates.R
 \name{beamer_mil}
 \alias{beamer_mil}
-\title{Illinois Market Information Lab (MIL) Themed Beamer Presentation Template for RMarkdown}
+\title{Beamer Illinois Market Information Lab Presentation Template for RMarkdown}
 \usage{
 beamer_mil(toc = FALSE, slide_level = 3, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE, fig_caption = TRUE,
-  dev = "pdf", df_print = "default", fonttheme = "default",
-  highlight = "default", keep_tex = FALSE, latex_engine = "pdflatex",
-  citation_package = c("none", "natbib", "biblatex"), includes = NULL,
-  md_extensions = NULL, pandoc_args = NULL)
+  fig_width = 10, fig_height = 7, fig_crop = TRUE,
+  fig_caption = TRUE, dev = "pdf", df_print = "default",
+  fonttheme = "default", highlight = "default", keep_tex = FALSE,
+  latex_engine = "pdflatex", citation_package = c("none", "natbib",
+  "biblatex"), includes = NULL, md_extensions = NULL,
+  pandoc_args = NULL)
 }
 \arguments{
 \item{toc}{\code{TRUE} to include a table of contents in the output (only
@@ -72,12 +73,12 @@ additional details.}
 \item{pandoc_args}{Additional command line options to pass to pandoc}
 }
 \value{
-A modified \code{beamer_presentation} based on the "MIL" (UIUC)
+A modified \code{beamer_presentation} based on the "marketlab" (UIUC)
 Beamer themed template.
 }
 \description{
-Generates from an RMarkdown file a Beamer presentation with "MIL" (UIUC)
-colors and identity standards.
+Generates from an RMarkdown file a Beamer presentation with "marketlab" (UIUC)
+colors and identity standards with a focus on "Orange" and "White".
 }
 \examples{
 \dontrun{
@@ -89,5 +90,5 @@ rmarkdown::render("slide_deck/slide_deck.Rmd")
 }
 }
 \author{
-RStudio RMarkdown Team (Everything) & JJB (Theme hook + Beamer Theme)
+RStudio RMarkdown Team (Everything), JJB (Theme hook), Jose Luis Rodriguez (Beamer Marketlab Theme)
 }

@@ -5,11 +5,12 @@
 \title{"Illinois" (UIUC) Themed Beamer Presentation Template for RMarkdown}
 \usage{
 beamer_illinois(toc = FALSE, slide_level = 3, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE, fig_caption = TRUE,
-  dev = "pdf", df_print = "default", fonttheme = "default",
-  highlight = "default", keep_tex = FALSE, latex_engine = "pdflatex",
-  citation_package = c("none", "natbib", "biblatex"), includes = NULL,
-  md_extensions = NULL, pandoc_args = NULL)
+  fig_width = 10, fig_height = 7, fig_crop = TRUE,
+  fig_caption = TRUE, dev = "pdf", df_print = "default",
+  fonttheme = "default", highlight = "default", keep_tex = FALSE,
+  latex_engine = "pdflatex", citation_package = c("none", "natbib",
+  "biblatex"), includes = NULL, md_extensions = NULL,
+  pandoc_args = NULL)
 }
 \arguments{
 \item{toc}{\code{TRUE} to include a table of contents in the output (only
