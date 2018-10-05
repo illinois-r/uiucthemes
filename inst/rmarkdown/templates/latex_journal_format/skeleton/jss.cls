@@ -220,7 +220,7 @@
 %% new \maketitle
 \def\@myoddhead{
   {\color{white} JSS}\\[-1.42cm]
-  \hspace{-2em} \includegraphics[height=23mm,keepaspectratio]{stat432-logo} \hfill
+  \hspace{-2em} \includegraphics[height=23mm,keepaspectratio]{stat-logo} \hfill
   \parbox[b][23mm]{118mm}{\hrule height 3pt
    \center{
    {\fontfamily{pzc} \fontsize{28}{32} \selectfont \@JournalName}

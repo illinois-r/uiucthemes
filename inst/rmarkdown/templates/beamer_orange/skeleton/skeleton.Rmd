@@ -1,5 +1,5 @@
 ---
-title: "Beamer Illinois Orange Theme"
+title: "Illinois Orange Beamer Theme"
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"

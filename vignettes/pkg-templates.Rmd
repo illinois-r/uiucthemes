@@ -1,0 +1,40 @@
+---
+title: "Gallery of UIUC-themed Templates"
+author: "James J Balamuta"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Gallery of UIUC-themed Templates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Overview
+
+The **uiucthemes** package includes a collection of UIUC-themed templates for
+presentations, journal articles, and exam templates.
+
+Included in the package are:
+
+- `beamer_illinois`: Illinois colored header boxes
+- `beamer_orange`: Minimialist slides with a color preference to orange.
+- `beamer_mil`: Beamer Market Information Lab (MIL)
+- `latex_journal_report`: initial implementation of a journal entry for a class.
+
+## Templates
+
+### Beamer
+
+#### `beamer_illinois`
+
+![`beamer_illinois` Beamer LaTeX Template](beamer_illinois.png){width=300px height=400px}
+
+#### `beamer_orange`
+
+![`beamer_orange` Beamer LaTeX Template](beamer_orange.png){width=300px height=400px}
+
+#### `beamer_mil`
+
+![`beamer_mil` Beamer LaTeX Template](beamer_mil.png){width=300px height=400px}

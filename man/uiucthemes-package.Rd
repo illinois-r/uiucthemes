@@ -7,8 +7,8 @@
 \title{uiucthemes: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations}
 \description{
 A set of custom 'R' 'Markdown' templates for documents and
-presentations with the University of Illinois at Urbana-Champaign (UIUC)
-color scheme and identity standards.
+   presentations with the University of Illinois at Urbana-Champaign (UIUC)
+   color scheme and identity standards.
 }
 \details{
 Trial run on RMarkdown templates
@@ -23,12 +23,13 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: James Balamuta \email{balamut2@illinois.edu}
+\strong{Maintainer}: James Balamuta \email{balamut2@illinois.edu} (0000-0003-2826-8458)
 
 Other contributors:
 \itemize{
-  \item Steven Andrew Culpepper \email{sculpepp@illinois.edu} [contributor]
-  \item David Dalpiaz \email{dalpiaz2@illinois.edu} [contributor]
+  \item Steven Andrew Culpepper \email{sculpepp@illinois.edu} (Provided the Minimal Orange Beamer Theme) [contributor]
+  \item David Dalpiaz \email{dalpiaz2@illinois.edu} (Collaborated on the LaTeX Journal Theme) [contributor]
+  \item Jose Luis Rodriguez \email{jrodriguezorjuela@luc.edu} (Provided the Market Information Lab (MIL) Beamer Theme) [contributor]
 }
 
 }

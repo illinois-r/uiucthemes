@@ -1,5 +1,5 @@
-name: "Beamer Market Information Lab (MIL)"
+name: "Illlinois Market Information Lab (MIL) Beamer Theme"
 description: >
- Template for creating slides using RMarkdown based on the Beamer Illinois Market
- Information Lab LaTeX template.
+ Template for creating slides using RMarkdown based on the Illinois Market
+ Information Lab (MIL) Beamer LaTeX template.
 create_dir: true
