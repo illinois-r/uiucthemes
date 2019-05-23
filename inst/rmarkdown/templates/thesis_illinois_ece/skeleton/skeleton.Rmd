@@ -1,0 +1,48 @@
+---
+title: "Illinois Thesis ECE Style"
+author: "StudentFirstName StudentLastName"
+department: "Informatics"
+phd-thesis: true
+thesis-year: 2019
+abstract: >
+  Here is a true to life PhD or MSc Thesis.
+dedication: >
+  Without the loving support of my parents...
+acknowledgements: >
+  Thank you to the wonderful committee members that provided many insights.
+advisor:
+  - name: Advisor 1
+  - name: Advisor 2
+committee-members:
+  - name: Professor 1FirstName 1LastName
+    position: Chair
+  - name: Professor 2FirstName 2LastName
+bibliography: 
+  - bib/thesisrefs.bib
+output: 
+   uiucthemes::illinois_thesis_ece_pdf
+---
+
+The question before us is ...
+
+<!--- # Chapter 1 -->
+
+To dynamically include a table use: 
+
+```{r my-table, echo = FALSE, fig.pos="H"}
+knitr::kable(head(mtcars, 5), caption = "Sample table")
+```
+
+Tables can be referenced with `\@ref(tab:my-table)`, where `my-table` is
+the name of the code chunk. e.g. Please see Table \@ref(tab:my-table)...
+
+To dynamically include a table use: 
+
+```{r my-figure, echo = FALSE, fig.cap="Sample figure", fig.pos="H"}
+plot(mtcars$wt, mtcars$mpg)
+```
+
+Referencing a figure is done using `\@ref(fig:my-figure)`, where `my-figure` is
+the name of the code chunk. e.g. Please see Figure \@ref(fig:my-figure)...
+
+
