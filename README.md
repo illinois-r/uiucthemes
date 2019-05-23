@@ -12,11 +12,16 @@ for presentations, journal articles, and exam templates.
 
 Included in the package are:
 
-  - `beamer_illinois`: Illinois colored header boxes
+  - `beamer_illinois`: Illinois colored header boxes.
   - `beamer_orange`: Minimialist slides with a color preference to
     orange.
-  - `beamer_mil`: Beamer Market Information Lab (MIL)
-  - `latex_journal_report`: initial implementation of a journal entry
+  - `beamer_mil`: [Market Information Lab
+    (MIL)](https://giesbusiness.illinois.edu/margolis-market-information-lab)
+    Beamer Template.
+  - `thesis_pdf_ece`: LaTeX Thesis Template for the [Department of ECE
+    at
+    UIUC](https://wiki.illinois.edu/wiki/display/ECEThesisReview/LaTeX+Resources).
+  - `latex_journal_report`: Initial implementation of a journal entry
     for a class.
 
 Screenshots of each template are included in package overview vignette.
@@ -31,8 +36,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'October 03, 2018'      # Month DD, YYYY (Main Slide)
-short-date: '10/03/2018' # MM/DD/YYYY (Lower Right)
+date: 'May 22, 2019'      # Month DD, YYYY (Main Slide)
+short-date: '05/22/2019' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -134,8 +139,7 @@ install.packages(c("rmarkdown","uiucthemes"))
 install.packages(c("rmarkdown","uiucthemes"))
 ```
 
-3)  Use the `rmarkdown::draft` function to create
-articles:
+3)  Use the `rmarkdown::draft` function to create articles:
 
 <!-- end list -->
 
