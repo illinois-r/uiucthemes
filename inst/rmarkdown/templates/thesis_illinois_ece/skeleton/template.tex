@@ -45,16 +45,14 @@ $endif$
 %$endfor$
 }
 
-%$if(committee)$
-%\committee{
-%$for(committee.member)$
-%$committee.member.name$
-%$if(committee.member.position)$
-%, $committee.member.position$
-%$endif$$sep$\newline
-%$endfor$
-%}
-%$endif$
+$if(committee-members)$
+\committee{
+$for(committee-members)$
+$committee-members.name$$if(committee-members.position)$, $committee-members.position$$endif$
+$sep$\\
+$endfor$
+}
+$endif$
 
 $if(highlighting-macros)$
 $highlighting-macros$
