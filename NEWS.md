@@ -1,3 +1,11 @@
+# uiucthemes 0.2.2
+
+## NEW
+
+- Added `thesis_pdf_ece()` template for writing a Master's and PhD thesis in
+  the Department of ECE at UIUC.
+
+
 # uiucthemes 0.2.1
 
 ## NEW
