@@ -180,11 +180,7 @@ $endfor$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAPHY
 %
-\bibliographystyle{$if(biblio-style)$
-$biblio-style$
-$else$
-IEEE_ECE
-$endif$}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$IEEE_ECE$endif$}
 % Put references in BibTeX format in thesisrefs.bib.
 
 $if(bibliography)$
