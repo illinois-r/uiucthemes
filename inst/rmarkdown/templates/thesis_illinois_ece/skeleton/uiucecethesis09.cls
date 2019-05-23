@@ -11,17 +11,17 @@
 %%% 3.10 option littlecaptions for \scriptsize captions
 %%% Jerome Colburn 6/23/2010
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from uiucecethesis09.cls.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file uiucecethesis09.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -231,15 +231,15 @@
      \vskip 0.17in %% ECE: edit to adjust title page spacing (SR)
         \vbox to 2.1in{
       \if@doctoral
-        \hspace*{-0.5in}Doctoral Committee:\\[12pt] 
-        \begin{tabular}{l}\@committee\end{tabular}%\vfil} 
+        \hspace*{-0.5in}Doctoral Committee:\\[12pt]
+        \begin{tabular}{l}\@committee\end{tabular}%\vfil}
       \else
         \if@c@mmitt@@
-          \hspace*{-0.5in}Master's Committee:\\[12pt] 
-         \begin{tabular}{l}\@committee\end{tabular}%\vfil} 
+          \hspace*{-0.5in}Master's Committee:\\[12pt]
+         \begin{tabular}{l}\@committee\end{tabular}%\vfil}
         \else
-        \hspace*{-0.5in}Adviser:\\[12pt] 
-         \@advisor%\vfil} 
+        \hspace*{-0.5in}Adviser:\\[12pt]
+         \@advisor%\vfil}
         \fi
       \fi}
     \newpage
@@ -285,14 +285,14 @@
 \let\thesis@listtablename=\listtablename % JSC
 \def\listoftables{\newpage%
 \def\listtablename{\if@mixc@sech@p\thesis@listtablename
-\else\MakeUppercase{\thesis@listtablename}\fi} %% JSC
+\else\texorpdfstring{\MakeUppercase{\thesis@listtablename}}{}\fi} %% JSC
     \addcontentsline{toc}{chapter}{\listtablename}%
     {\singlespacing\thesis@listoftables}}
 \let\thesis@listoffigures=\listoffigures
 \let\thesis@listfigurename=\listfigurename % JSC
 \def\listoffigures{\newpage%
 \def\listfigurename{\if@mixc@sech@p\thesis@listfigurename
-\else\MakeUppercase{\thesis@listfigurename}\fi} %% JSC
+\else\texorpdfstring{\MakeUppercase{\thesis@listfigurename}}{}\fi} %% JSC
     \addcontentsline{toc}{chapter}{\listfigurename}%
     {\singlespacing\thesis@listoffigures}}
 \def\abstractname{Abstract} %% all caps (SR)
@@ -353,7 +353,7 @@
 \fi
 \newcommand\chaptertitlefont{\LARGE} %% (SR)
 \def\@chapter[#1]#2{%
-\def\c@pch@ptitl@{\if@mixc@sech@p#1\else\MakeUppercase{#1}\fi} %% (JSC)
+\def\c@pch@ptitl@{\if@mixc@sech@p#1\else\texorpdfstring{\MakeUppercase{#1}}{}\fi} %% (JSC)
   \ifnum \c@secnumdepth >\m@ne
     \if@mainmatter
       \refstepcounter{chapter}%
@@ -497,7 +497,7 @@
     \@on@inchm@rginfalse
   \fi
 \fi
-\if@on@inchm@rgin     %% ^ 3.09 
+\if@on@inchm@rgin     %% ^ 3.09
   \setlength{\textwidth}{\paperwidth}
   \if@thesisoffcenter
     \addtolength{\textwidth}{-2.75in}
