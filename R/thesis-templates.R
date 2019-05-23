@@ -1,25 +1,33 @@
-#' Creates an R Markdown PDF Thesis document in the Style of the ECE Department at UIUC
+#' Creates an R Markdown PDF Thesis document in the Style of the ECE Department
+#' at UIUC
 #'
-#' Processes the R Markdown file using the appropriate template.
+#' Processes the R Markdown file using the appropriate ECE PDF template.
 #'
-#' @param toc A Boolean (TRUE or FALSE) specifying whether table of contents should be created
-#' @param toc_depth A positive integer
-#' @param highlight Syntax highlighting style. Supported styles include "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", and "haddock". Pass NULL to prevent syntax highlighting.
-#' @return A modified \code{pdf_document} that uses the ECE Department style at
-#'  UIUC
+#' @param toc_depth Depth shown in table of contents. Must be a positive integer.
+#' @param highlight Syntax highlighting style. Supported styles include:
+#'                  "default", "tango", "pygments", "kate", "monochrome",
+#'                  "espresso", "zenburn", and "haddock". Pass `NULL`
+#'                   to prevent syntax highlighting.
 #'
-#' @details
-#' The function is based off of [`thesisdown::thesis_pdf`](https://github.com/ismayc/thesisdown)
-#' format by Chester Ismay.
+#' @return
+#' A modified \code{pdf_document} that uses the ECE Department style at UIUC.
+#'
+#' @references
+#'
+#' - [`thesisdown::thesis_pdf`](https://github.com/ismayc/thesisdown) by Chester Ismay
+#'     - The _R_ function is largely based off of this format.
+#' - [ECE Department Thesis LaTeX Template](https://wiki.illinois.edu/wiki/display/ECEThesisReview/LaTeX+Resources)
+#'     - The `template.tex` uses the shell.
+#'
 #' @export
 #' @examples
 #' \dontrun{
-#'  output: uiucthemes::illinois_thesis_ece_pdf
+#'  output: uiucthemes::thesis_pdf_ece
 #' }
-illinois_thesis_ece_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", ...){
+thesis_pdf_ece <- function(toc_depth = 3, highlight = "default", ...){
 
   base <- bookdown::pdf_book(template = "template.tex",
-                             toc = toc,
+                             toc = TRUE,
                              toc_depth = toc_depth,
                              highlight = highlight,
                              keep_tex = TRUE,

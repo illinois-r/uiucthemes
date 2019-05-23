@@ -20,7 +20,7 @@ committee-members:
 bibliography: 
   - bib/thesisrefs.bib
 output: 
-   uiucthemes::illinois_thesis_ece_pdf
+   uiucthemes::thesis_pdf_ece
 ---
 
 The question before us is ...
