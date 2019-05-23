@@ -25,7 +25,7 @@ output:
 
 The question before us is ...
 
-<!--- # Chapter 1 -->
+# Section
 
 To dynamically include a table use: 
 
@@ -36,6 +36,8 @@ knitr::kable(head(mtcars, 5), caption = "Sample table")
 Tables can be referenced with `\@ref(tab:my-table)`, where `my-table` is
 the name of the code chunk. e.g. Please see Table \@ref(tab:my-table)...
 
+## Subsection
+
 To dynamically include a table use: 
 
 ```{r my-figure, echo = FALSE, fig.cap="Sample figure", fig.pos="H"}
@@ -44,5 +46,4 @@ plot(mtcars$wt, mtcars$mpg)
 
 Referencing a figure is done using `\@ref(fig:my-figure)`, where `my-figure` is
 the name of the code chunk. e.g. Please see Figure \@ref(fig:my-figure)...
-
 
