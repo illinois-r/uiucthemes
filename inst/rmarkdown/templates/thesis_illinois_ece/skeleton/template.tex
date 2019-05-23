@@ -38,11 +38,11 @@ $endif$
 % Advisor name is required for
 % - doctoral students for the ProQuest abstract
 % - master's students who do not have a master's committee
-\advisor{Toad
-%$for(advisor.name)$
-%$advisor.name$
-%$sep$\and
-%$endfor$
+\advisor{
+$for(advisor)$
+$advisor.name$
+$sep$,
+$endfor$
 }
 
 $if(committee-members)$
