@@ -3,8 +3,8 @@
 ## NEW
 
 - Added the `beamer_mil()` template for the 
-  [Market Information Lab (MIL)](https://business.illinois.edu/mil/) @ UIUC
-  created by [Jose Luis Rodriguez](https://www.luc.edu/quinlan/faculty/joseluisrodriguezorjuela.shtml)
+  [Market Information Lab (MIL)](https://giesbusiness.illinois.edu/margolis-market-information-lab) @ UIUC
+  created by [Jose Luis Rodriguez](https://giesbusiness.illinois.edu/profile/jose-luis-rodriguez-orjuela)
 - Added a vignette that contains screenshots of each template.
 
 ## CHANGES

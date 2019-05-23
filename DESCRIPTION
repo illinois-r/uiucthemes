@@ -13,7 +13,7 @@ Authors@R: c(
          email = "dalpiaz2@illinois.edu", role = "ctb",
          comment = "Collaborated on the LaTeX Journal Theme"),
   person("Jose Luis", "Rodriguez",
-         email = "jrodriguezorjuela@luc.edu", role = "ctb",
+         email = "jlroo@illinois.edu", role = "ctb",
          comment = "Provided the Market Information Lab (MIL) Beamer Theme")
   )
 Description: A set of custom 'R' 'Markdown' templates for documents and
