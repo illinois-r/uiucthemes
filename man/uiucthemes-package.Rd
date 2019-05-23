@@ -10,9 +10,6 @@ A set of custom 'R' 'Markdown' templates for documents and
    presentations with the University of Illinois at Urbana-Champaign (UIUC)
    color scheme and identity standards.
 }
-\details{
-Trial run on RMarkdown templates
-}
 \seealso{
 Useful links:
 \itemize{
@@ -33,3 +30,4 @@ Other contributors:
 }
 
 }
+\keyword{internal}
