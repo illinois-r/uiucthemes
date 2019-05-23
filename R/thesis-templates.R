@@ -8,6 +8,7 @@
 #'                  "default", "tango", "pygments", "kate", "monochrome",
 #'                  "espresso", "zenburn", and "haddock". Pass `NULL`
 #'                   to prevent syntax highlighting.
+#' @param ... Additional parameters passed to [bookdown::pdf_book()].
 #'
 #' @return
 #' A modified \code{pdf_document} that uses the ECE Department style at UIUC.

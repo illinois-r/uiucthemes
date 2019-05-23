@@ -14,6 +14,8 @@ thesis_pdf_ece(toc_depth = 3, highlight = "default", ...)
 "default", "tango", "pygments", "kate", "monochrome",
 "espresso", "zenburn", and "haddock". Pass \code{NULL}
 to prevent syntax highlighting.}
+
+\item{...}{Additional parameters passed to \code{\link[bookdown:pdf_book]{bookdown::pdf_book()}}.}
 }
 \value{
 A modified \code{pdf_document} that uses the ECE Department style at UIUC.
