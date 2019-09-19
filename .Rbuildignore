@@ -4,3 +4,6 @@
 ^README-.*\.png$
 ^\.travis\.yml$
 ^cran-comments\.md$
+^inst/rmarkdown/templates/cover_letter$
+^inst/rmarkdown/templates/exam$
+^inst/rmarkdown/templates/uiuc_hw$
