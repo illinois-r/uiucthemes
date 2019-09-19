@@ -19,10 +19,11 @@ presentations, journal articles, and exam templates.
 
 Included in the package are:
 
-- `beamer_illinois`: Illinois colored header boxes
+- `beamer_illinois`: Illinois colored header boxes.
 - `beamer_orange`: Minimialist slides with a color preference to orange.
-- `beamer_mil`: Beamer Market Information Lab (MIL)
-- `latex_journal_report`: initial implementation of a journal entry for a class.
+- `beamer_mil`: [Market Information Lab (MIL)](https://giesbusiness.illinois.edu/margolis-market-information-lab) Beamer Template.
+- `thesis_pdf_ece`: LaTeX Thesis Template for the [Department of ECE at UIUC](https://wiki.illinois.edu/wiki/display/ECEThesisReview/LaTeX+Resources).
+- `latex_journal_report`: Initial implementation of a journal entry for a class.
 
 Screenshots of each template are included in package overview vignette.
 
