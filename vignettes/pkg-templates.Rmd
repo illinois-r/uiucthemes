@@ -21,6 +21,7 @@ Included in the package are:
 - `beamer_illinois`: Illinois colored header boxes
 - `beamer_orange`: Minimialist slides with a color preference to orange.
 - `beamer_mil`: Beamer Market Information Lab (MIL)
+- `html_imetropolis`: Metropolis themed with Illinois colors and logos.
 - `latex_journal_report`: initial implementation of a journal entry for a class.
 
 ## Templates
@@ -38,3 +39,9 @@ Included in the package are:
 #### `beamer_mil`
 
 ![`beamer_mil` Beamer LaTeX Template](beamer_mil.png){width=300px height=400px}
+
+### HTML
+
+#### `html_imetropolis`
+
+![`html_imetropolis` HTML Template](html_imetropolis.png){width=300px height=400px}

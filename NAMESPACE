@@ -3,5 +3,6 @@
 export(beamer_illinois)
 export(beamer_mil)
 export(beamer_orange)
+export(html_imetropolis)
 export(latex_journal_format)
 importFrom(rmarkdown,beamer_presentation)

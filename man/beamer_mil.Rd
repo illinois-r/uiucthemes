@@ -29,7 +29,7 @@ individual bullet you can precede it with \code{>}. For example:
 
 \item{fig_width}{Default width (in inches) for figures}
 
-\item{fig_height}{Default width (in inches) for figures}
+\item{fig_height}{Default height (in inches) for figures}
 
 \item{fig_crop}{\code{TRUE} to automatically apply the \code{pdfcrop} utility
 (if available) to pdf figures}
@@ -46,7 +46,7 @@ the \pkg{tibble} package to print a summary of the data frame. The "paged"
 method creates a paginated HTML table (note that this method is only valid
 for formats that produce HTML). In addition
 to the named methods you can also pass an arbitrary function to be used
-for printing data frames. You can disable the df_print behavior entirely
+for printing data frames. You can disable the \code{df_print} behavior entirely
 by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
 
 \item{fonttheme}{Beamer font theme (e.g. "structurebold").}
@@ -90,5 +90,7 @@ rmarkdown::render("slide_deck/slide_deck.Rmd")
 }
 }
 \author{
-RStudio RMarkdown Team (Everything), JJB (Theme hook), Jose Luis Rodriguez (Beamer Marketlab Theme)
+Jose Luis Rodriguez (Beamer Marketlab Theme)
+James Joseph Balamuta (Theme Hooks)
+See AUTHORS for more specific details behind each of the contributions.
 }

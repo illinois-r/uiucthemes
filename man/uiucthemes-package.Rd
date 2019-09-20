@@ -29,7 +29,7 @@ Other contributors:
 \itemize{
   \item Steven Andrew Culpepper \email{sculpepp@illinois.edu} (Provided the Minimal Orange Beamer Theme) [contributor]
   \item David Dalpiaz \email{dalpiaz2@illinois.edu} (Collaborated on the LaTeX Journal Theme) [contributor]
-  \item Jose Luis Rodriguez \email{jrodriguezorjuela@luc.edu} (Provided the Market Information Lab (MIL) Beamer Theme) [contributor]
+  \item Jose Luis Rodriguez \email{jlroo@illinois.edu} (Provided the Market Information Lab (MIL) Beamer Theme) [contributor]
 }
 
 }

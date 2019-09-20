@@ -1,0 +1,5 @@
+name: >
+ Illinois Metropolis HTML Theme
+description: >
+ Template for creating slides using RMarkdown based on the Illinois Metropolis HTML template.
+create_dir: true

@@ -1,10 +1,27 @@
+# uiucthemes 0.3.0
+
+## NEW
+
+- Added the `html_imetropolis()` template that provides a custom illinois-themed
+  Metropolis slide deck. 
+    - The slides are powered by [`xaringan`](https://github.com/yihui/xaringan) 
+      and Patrick Schratz's [`Metropolis` theme port](https://github.com/pat-s/xaringan-metropolis) 
+      into HTML.
+
+## CHANGES
+
+- Added an `AUTHORS` and `COPYRIGHTS` file to describe the different templates in
+  the package. 
+- Improved documentation on the Beamer slide decks.
+- Updated contributor email.
+
 # uiucthemes 0.2.1
 
 ## NEW
 
 - Added the `beamer_mil()` template for the 
-  [Market Information Lab (MIL)](https://business.illinois.edu/mil/) @ UIUC
-  created by [Jose Luis Rodriguez](https://www.luc.edu/quinlan/faculty/joseluisrodriguezorjuela.shtml)
+  [Market Information Lab (MIL)](https://giesbusiness.illinois.edu/Margolis-Market-Information-Lab) @ UIUC
+  created by [Jose Luis Rodriguez](https://giesbusiness.illinois.edu/profile/jose-luis-rodriguez-orjuela)
 - Added a vignette that contains screenshots of each template.
 
 ## CHANGES

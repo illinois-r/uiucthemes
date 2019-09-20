@@ -1,7 +1,7 @@
 Package: uiucthemes
 Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
-Version: 0.2.1
+Version: 0.3.0.9000
 Authors@R: c(
   person("James", "Balamuta", 
          email = "balamut2@illinois.edu", role = c("aut", "cre"),
@@ -13,7 +13,7 @@ Authors@R: c(
          email = "dalpiaz2@illinois.edu", role = "ctb",
          comment = "Collaborated on the LaTeX Journal Theme"),
   person("Jose Luis", "Rodriguez",
-         email = "jrodriguezorjuela@luc.edu", role = "ctb",
+         email = "jlroo@illinois.edu", role = "ctb",
          comment = "Provided the Market Information Lab (MIL) Beamer Theme")
   )
 Description: A set of custom 'R' 'Markdown' templates for documents and
@@ -25,8 +25,9 @@ Depends:
     R (>= 3.0)
 License: MIT + file LICENSE
 Imports:
-    rmarkdown (>= 1.1.0)
-RoxygenNote: 6.1.0
+    rmarkdown (>= 1.15.0),
+    xaringan (>= 0.12.0)
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Suggests: knitr
