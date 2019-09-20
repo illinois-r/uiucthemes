@@ -44,4 +44,4 @@ Included in the package are:
 
 #### `html_imetropolis`
 
-![`html_imetropolis` HTML Template](html_imetropolis_demo.png){width=300px height=400px}
+![`html_imetropolis` HTML Template](html_imetropolis.png){width=300px height=400px}
