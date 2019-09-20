@@ -10,8 +10,10 @@
 
 ## CHANGES
 
-- Improved documentation
-- Updated contributor email
+- Added an `AUTHORS` and `COPYRIGHTS` file to describe the different templates in
+  the package. 
+- Improved documentation on the Beamer slide decks.
+- Updated contributor email.
 
 # uiucthemes 0.2.1
 
