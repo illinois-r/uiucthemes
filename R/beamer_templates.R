@@ -2,11 +2,19 @@
 #'
 #' Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
 #' colors and identity standards.
+#'
 #' @inheritParams rmarkdown::beamer_presentation
-#' @return A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
-#'  Beamer themed template.
+#'
+#' @return
+#' A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
+#' Beamer themed template.
+#'
 #' @export
-#' @author RStudio RMarkdown Team (Everything) & JJB (Theme hook + Beamer Theme)
+#'
+#' @author
+#' James Joseph Balamuta (Theme Hooks and Beamer Template Modifications)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
@@ -62,12 +70,19 @@ beamer_illinois <- function(toc = FALSE,
 #'
 #' Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
 #' colors and identity standards with a focus on "Orange" and "White".
+#'
 #' @inheritParams rmarkdown::beamer_presentation
+#'
 #' @return A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
 #'  Beamer themed template.
+#'
 #' @export
+#'
 #' @author
-#' RStudio RMarkdown Team (Everything), JJB (Theme hook), Prof. Steven A Culpepper (Beamer Orange Theme)
+#' Prof. Steven A Culpepper (Beamer Orange Theme)
+#' James Joseph Balamuta (Theme Hooks)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
@@ -124,12 +139,20 @@ beamer_orange <- function(toc = FALSE,
 #'
 #' Generates from an RMarkdown file a Beamer presentation with "marketlab" (UIUC)
 #' colors and identity standards with a focus on "Orange" and "White".
+#'
 #' @inheritParams rmarkdown::beamer_presentation
-#' @return A modified \code{beamer_presentation} based on the "marketlab" (UIUC)
-#'  Beamer themed template.
+#'
+#' @return
+#' A modified \code{beamer_presentation} based on the "marketlab" (UIUC)
+#' Beamer themed template.
+#'
 #' @export
+#'
 #' @author
-#' RStudio RMarkdown Team (Everything), JJB (Theme hook), Jose Luis Rodriguez (Beamer Marketlab Theme)
+#' Jose Luis Rodriguez (Beamer Marketlab Theme)
+#' James Joseph Balamuta (Theme Hooks)
+#' See AUTHORS for more specific details behind each of the contributions.
+#'
 #' @examples
 #' \dontrun{
 #' # Generate slide deck from beamer template
