@@ -40,6 +40,11 @@ Included in the package are:
 
 ![`beamer_mil` Beamer LaTeX Template](beamer_mil.png){width=300px height=400px}
 
+#### `beamer_imetropolis`
+
+![`beamer_imetropolis` Beamer LaTeX Template](beamer_imetropolis.png){width=300px height=400px}
+
+
 ### HTML
 
 #### `html_imetropolis`
