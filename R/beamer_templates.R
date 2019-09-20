@@ -288,7 +288,6 @@ beamer_illinois <- function(toc = FALSE,
 #' @export
 #'
 #' @author
-#' Prof. Steven A Culpepper (Beamer Orange Theme)
 #' James Joseph Balamuta (Theme Hooks)
 #' See AUTHORS for more specific details behind each of the contributions.
 #'

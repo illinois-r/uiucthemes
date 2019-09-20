@@ -90,7 +90,6 @@ rmarkdown::render("slide_deck/slide_deck.Rmd")
 }
 }
 \author{
-Prof. Steven A Culpepper (Beamer Orange Theme)
 James Joseph Balamuta (Theme Hooks)
 See AUTHORS for more specific details behind each of the contributions.
 }
