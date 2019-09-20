@@ -24,7 +24,7 @@
 #' rmarkdown::render("slide_deck/slide_deck.Rmd")
 #' }
 beamer_illinois <- function(toc = FALSE,
-                            slide_level = 3,
+                            slide_level = 2,
                             incremental = FALSE,
                             fig_width = 10,
                             fig_height = 7,
@@ -317,7 +317,7 @@ beamer_imetropolis <- function(toc = FALSE,
                           md_extensions = NULL,
                           pandoc_args = NULL){
 
-  #template <- find_resource("beamer_orange", "template.tex")
+  template <- find_resource("beamer_imetropolis", "imetropolis.tex")
 
   #load_resources_if_missing("beamer_orange", c("ilogo.png"))
 
@@ -337,7 +337,9 @@ beamer_imetropolis <- function(toc = FALSE,
                                  keep_tex = keep_tex,
                                  latex_engine = latex_engine,
                                  citation_package = citation_package,
-                                 includes = includes,
+                                 includes = rmarkdown::includes(in_header = c(template, includes$in_header),
+                                                     before_body = includes$before_body,
+                                                     after_body = includes$after_body),
                                  md_extensions = md_extensions,
                                  pandoc_args = pandoc_args)
 
