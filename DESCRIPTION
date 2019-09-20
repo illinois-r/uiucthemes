@@ -25,7 +25,8 @@ Depends:
     R (>= 3.0)
 License: MIT + file LICENSE
 Imports:
-    rmarkdown (>= 1.1.0)
+    rmarkdown (>= 1.15.0),
+    xaringan (>= 0.12.0)
 RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
