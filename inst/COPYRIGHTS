@@ -1,0 +1,29 @@
+Overall license:
+================
+
+   The underlying uiucthemes package is released under the
+   MIT License. Contributions from RMarkdown are released under
+   GPL >= 3 and xaringan is under MIT License.
+
+Details:
+========
+
+Files: *
+Copyright: James Joseph Balamuta
+License: MIT License
+
+Files: inst/rmarkdown/templates/html_imetropolis/*
+Copyright: Patrick Schratz
+License: MIT License
+
+Files: inst/rmarkdown/templates/latex_journal_format/*
+Copyright: David Dalpiaz, Journal of Statistical Software (Achim Zeileis)
+License: MIT License + GPL-2 | GPL-3
+
+Files: inst/rmarkdown/templates/beamer_mil/*
+Copyright: Jose Luis Rodriguez Orjuela
+License: MIT License
+
+Files: inst/rmarkdown/templates/beamer_orange/*
+Copyright: Steven Culpepper
+License: MIT License
