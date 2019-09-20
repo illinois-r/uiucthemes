@@ -1,0 +1,67 @@
+---
+title: "Illinois Metropolis HTML Theme"
+subtitle: "Demo Slides"
+author: "John and Mary Doe"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'      # Month DD, YYYY (Main Slide)
+output: 
+   uiucthemes::html_imetropolis
+---
+
+# Frame title     
+## Subframe title 
+
+### SubsubFrame Title
+
+Frame content 
+
+---
+class: inverse, center, middle, clear
+
+# Section Title
+
+---
+
+# Example Lists and Two-Columns
+
+.pull-left[
+**Unordered List**
+
+- [University of Illinois at Urbana-Champaign (UIUC)](http://illinois.edu)
+- [Department of Statistics](http://www.stat.illinois.edu/)
+- [Illinois Informatics Institute](http://www.informatics.illinois.edu/)
+]
+.pull-right[
+*Ordered List*
+
+1. <http://thecoatlessprofessor.com>
+2. <https://github.com/coatless>
+]
+
+---
+
+# LaTeX
+
+Display style latex:
+
+$$a^2 + b^2 = c^2$$
+
+Inline style latex: $\frac{1}{2} = \frac{3}{x}$
+
+???
+
+Some notes to the presenter that will be displayed on a separate monitor.
+
+---
+
+# Code
+
+Block R code: 
+
+```{r}
+2 + 2
+```
+
+Inline R code:
+
+`r 1 + 1`
+
