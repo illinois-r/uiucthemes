@@ -1,0 +1,68 @@
+% Header include into the metropolis beamer theme.
+
+% Setup the common actions
+\metroset{titleformat = smallcaps, numbering = fraction, background = light}
+
+% Official UIUC Colors
+% https://creativeservices.illinois.edu/brand/logos-and-colors.html
+\definecolor{uiucblue}{RGB}{19,41,75}
+\definecolor{uiucorange}{RGB}{232,74,39}
+
+
+% Setup URL colors
+\hypersetup{colorlinks = true,
+            linkcolor = uiucorange,
+            citecolor = uiucorange,
+            filecolor = uiucorange,
+            urlcolor = uiucorange}
+
+% Override the metropolis beamer colors
+\setbeamercolor{frametitle}{fg = white, bg = uiucblue}
+\setbeamercolor*{title}{fg = uiucblue}
+\setbeamercolor{normal text}{fg = black}
+
+% Boxes
+
+% Regular boxes
+\setbeamercolor*{block title}{fg=white, bg=uiucblue}
+\setbeamercolor*{block body}{bg=uiucblue!25}
+
+% Example boxes
+\setbeamercolor*{block title example}{fg=white, bg=uiucorange}
+\setbeamercolor*{block body example}{bg=uiucorange!25}
+
+% Beamer template hacks
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{blocks}[rounded]
+
+
+% Add the escape column definitions
+\def\begincols{\begin{columns}}
+\def\begincol{\begin{column}}
+\def\endcol{\end{column}}
+\def\endcols{\end{columns}}
+
+% Appends to each slide (non-title) the UIUC logo
+\titlegraphic{\hfill\includegraphics[height=0.55 cm]{horizontal-o-illinois.png}}
+
+% On non-title slides, there isn't an easy way with metropolis to incorporate
+% an image... Thankfully, there already was a nice Q & A on TexExchange
+% https://tex.stackexchange.com/questions/444957/logo-in-a-frametitle-metropolis-theme
+\makeatletter
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip%
+  \begin{beamercolorbox}[%
+      wd=\paperwidth,%
+      sep=0pt,%
+      leftskip=\metropolis@frametitle@padding,%
+      rightskip=\metropolis@frametitle@padding,%
+    ]{frametitle}%
+  \metropolis@frametitlestrut@start%
+  \insertframetitle%
+  \nolinebreak%
+  \metropolis@frametitlestrut@end%
+  \hfill%\hspace*{-.3cm}\vspace*{-.1cm}
+  \includegraphics[height=1.5ex,keepaspectratio]{horizontal-rb-illinois.png} % Modified this line
+  \end{beamercolorbox}%
+}
+\makeatother
