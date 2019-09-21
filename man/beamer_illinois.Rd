@@ -4,15 +4,7 @@
 \alias{beamer_illinois}
 \title{"Illinois" (UIUC) Themed Beamer Presentation Template for RMarkdown}
 \usage{
-beamer_illinois(toc = FALSE, slide_level = 3, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE,
-  fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", highlight = "default", keep_tex = FALSE,
-  latex_engine = "pdflatex", citation_package = c("none", "natbib",
-  "biblatex"), includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL)
-
-beamer_illinois(toc = FALSE, slide_level = 3, incremental = FALSE,
+beamer_illinois(toc = FALSE, slide_level = 2, incremental = FALSE,
   fig_width = 10, fig_height = 7, fig_crop = TRUE,
   fig_caption = TRUE, dev = "pdf", df_print = "default",
   fonttheme = "default", highlight = "default", keep_tex = FALSE,
@@ -83,14 +75,8 @@ additional details.}
 \value{
 A modified \code{beamer_presentation}  based on the "Illinois" (UIUC)
 Beamer themed template.
-
-A modified \code{beamer_presentation}  based on the "Illinois" (UIUC)
-Beamer themed template.
 }
 \description{
-Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
-colors and identity standards.
-
 Generates from an RMarkdown file a Beamer presentation with "Illinois" (UIUC)
 colors and identity standards.
 }
@@ -102,18 +88,8 @@ rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiuc
 # Compile the document
 rmarkdown::render("slide_deck/slide_deck.Rmd")
 }
-\dontrun{
-# Generate slide deck from beamer template
-rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
-
-# Compile the document
-rmarkdown::render("slide_deck/slide_deck.Rmd")
-}
 }
 \author{
-James Joseph Balamuta (Theme Hooks and Beamer Template Modifications)
-See AUTHORS for more specific details behind each of the contributions.
-
 James Joseph Balamuta (Theme Hooks and Beamer Template Modifications)
 See AUTHORS for more specific details behind each of the contributions.
 }
