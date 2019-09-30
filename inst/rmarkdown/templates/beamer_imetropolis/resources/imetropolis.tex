@@ -1,5 +1,10 @@
 % Header include into the metropolis beamer theme.
 
+% Details on hacking metropolis theme:
+%
+% https://bloerg.net/2015/12/10/modern-beamer-theme-revisited.html
+% http://mirrors.ctan.org/macros/latex/contrib/beamer-contrib/themes/metropolis/doc/metropolistheme.pdf
+
 % Setup the common actions
 \metroset{titleformat = smallcaps, numbering = fraction, background = light}
 
@@ -20,6 +25,11 @@
 \setbeamercolor{frametitle}{fg = white, bg = uiucblue}
 \setbeamercolor*{title}{fg = uiucblue}
 \setbeamercolor{normal text}{fg = black}
+
+\setbeamercolor{progress bar}{%
+  fg=uiucorange,
+  bg=uiucorange!50
+}
 
 % Boxes
 
