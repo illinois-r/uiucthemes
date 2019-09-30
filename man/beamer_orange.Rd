@@ -73,7 +73,7 @@ additional details.}
 \item{pandoc_args}{Additional command line options to pass to pandoc}
 }
 \value{
-A modified \code{beamer_presentation} based on the "Illinois" (UIUC)
+A modified \code{beamer_presentation}  based on the "Illinois" (UIUC)
 Beamer themed template.
 }
 \description{

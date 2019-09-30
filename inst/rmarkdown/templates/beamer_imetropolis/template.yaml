@@ -1,0 +1,6 @@
+name: >
+ Illinois Metropolis Beamer Theme
+description: >
+ Template for creating slides using RMarkdown based on the Metropolis Beamer
+ LaTeX template.
+create_dir: true

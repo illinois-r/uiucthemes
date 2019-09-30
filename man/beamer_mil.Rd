@@ -73,7 +73,7 @@ additional details.}
 \item{pandoc_args}{Additional command line options to pass to pandoc}
 }
 \value{
-A modified \code{beamer_presentation} based on the "marketlab" (UIUC)
+A modified \code{beamer_presentation}  based on the "marketlab" (UIUC)
 Beamer themed template.
 }
 \description{
