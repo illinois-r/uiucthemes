@@ -1,7 +1,7 @@
 
 [![Travis-CI Build
-Status](https://travis-ci.org/coatless/uiucthemes.svg?branch=master)](https://travis-ci.org/coatless/uiucthemes)[![CRAN
-RStudio mirror
+Status](https://travis-ci.org/illinois-r/uiucthemes.svg?branch=master)](https://travis-ci.org/illinois-r/uiucthemes)
+[![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes)
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
 
@@ -31,8 +31,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'October 03, 2018'      # Month DD, YYYY (Main Slide)
-short-date: '10/03/2018' # MM/DD/YYYY (Lower Right)
+date: 'September 30, 2019'      # Month DD, YYYY (Main Slide)
+short-date: '09/30/2019' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -134,8 +134,7 @@ install.packages(c("rmarkdown","uiucthemes"))
 install.packages(c("rmarkdown","uiucthemes"))
 ```
 
-3)  Use the `rmarkdown::draft` function to create
-articles:
+3)  Use the `rmarkdown::draft` function to create articles:
 
 <!-- end list -->
 
