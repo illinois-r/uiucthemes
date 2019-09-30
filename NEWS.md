@@ -2,6 +2,11 @@
 
 ## NEW
 
+- Added the `beamer_imetropolis()` template that modifies the Metropolis theme
+  to match slide deck. 
+    - The slides are powered by Matthias Vogelgesang's
+      [`metropolis`](https://github.com/matze/mtheme), formerly "mtheme",
+      for Beamer.
 - Added the `html_imetropolis()` template that provides a custom illinois-themed
   Metropolis slide deck. 
     - The slides are powered by [`xaringan`](https://github.com/yihui/xaringan) 
