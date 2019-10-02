@@ -8,7 +8,7 @@
 
 0 errors | 0 warnings | 0 note
 
-- There were no reported notes.
+- Resubmit that addresses dead links found in the `README.md` file.
 
 ## Reverse dependencies
 
