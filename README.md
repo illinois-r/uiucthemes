@@ -16,6 +16,10 @@ Included in the package are:
   - `beamer_orange`: Minimialist slides with a color preference to
     orange.
   - `beamer_mil`: Beamer Market Information Lab (MIL)
+  - `beamer_imetropolis`: Metropolis Theme with Illinois colors for
+    Beamer.
+  - `html_imetropolis`: `xaringan`-powered Metropolis Theme for
+    Illinois.
   - `latex_journal_report`: initial implementation of a journal entry
     for a class.
 
@@ -31,8 +35,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'September 30, 2019'      # Month DD, YYYY (Main Slide)
-short-date: '09/30/2019' # MM/DD/YYYY (Lower Right)
+date: 'October 02, 2019'      # Month DD, YYYY (Main Slide)
+short-date: '10/02/2019' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -90,8 +94,8 @@ This generates:
     Formats](http://rmarkdown.rstudio.com/developer_custom_formats.html)
   - [Beamer Presentation
     Format](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
-  - [Beamer Pandoc
-    Template](https://github.com/jgm/pandoc-templates/blob/master/default.beamer)
+  - [LaTeX Generic Pandoc
+    Template](https://github.com/jgm/pandoc-templates/blob/db59a5e77b0a5629f0801eb82103814842f2e2ed/default.latex)
   - [`rticles` An R Package](https://github.com/rstudio/rticles)
 
 ### Prerequisites
@@ -124,7 +128,7 @@ install.packages(c("rmarkdown","uiucthemes"))
 
 1)  Install [pandoc](http://johnmacfarlane.net/pandoc/) using the
     [instructions for your
-    platform](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md).
+    platform](https://github.com/rstudio/rmarkdown/blob/bd5c509c888bfd309ef059ae6cbdeb408ec53d66/vignettes/pandoc.Rmd).
 
 2)  Install the **rmarkdown** and **uiucthemes** packages:
 

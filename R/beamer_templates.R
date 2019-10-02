@@ -251,7 +251,9 @@ beamer_imetropolis <- function(toc = FALSE,
 
   template <- find_resource("beamer_imetropolis", "imetropolis.tex")
 
-  #load_resources_if_missing("beamer_orange", c("ilogo.png"))
+  load_resources_if_missing("beamer_orange",
+                            c("horizontal-rb-illinois.png",
+                              "horizontal-o-illinois.png"))
 
   rmarkdown::beamer_presentation(#template = template,
                                  toc = toc,

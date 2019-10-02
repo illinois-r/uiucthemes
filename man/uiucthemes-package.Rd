@@ -16,9 +16,9 @@ Trial run on RMarkdown templates
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/coatless/uiucthemes}
+  \item \url{https://github.com/illinois-r/uiucthemes}
   \item \url{http://thecoatlessprofessor.com/projects/uiucthemes/}
-  \item Report bugs at \url{https://github.com/coatless/uiucthemes/issues}
+  \item Report bugs at \url{https://github.com/illinois-r/uiucthemes/issues}
 }
 
 }
