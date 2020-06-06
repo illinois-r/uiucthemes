@@ -11,6 +11,10 @@
 - Re-built documentation under roxygen2 7.1.0
 - Modernized the README file
 
+## DEPLOYMENT
+
+- Switched from using TravisCI to GitHub Actions for continuous integration.
+
 # uiucthemes 0.3.0
 
 ## NEW
