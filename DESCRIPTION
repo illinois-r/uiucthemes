@@ -1,7 +1,7 @@
 Package: uiucthemes
 Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: c(
   person("James", "Balamuta", 
          email = "balamut2@illinois.edu", role = c("aut", "cre"),
@@ -25,9 +25,9 @@ Depends:
     R (>= 3.0)
 License: MIT + file LICENSE
 Imports:
-    rmarkdown (>= 1.15.0),
-    xaringan (>= 0.12.0)
-RoxygenNote: 6.1.1
+    rmarkdown (>= 2.2),
+    xaringan (>= 0.16.0)
+RoxygenNote: 7.1.0
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Suggests: 

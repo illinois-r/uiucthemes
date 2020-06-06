@@ -12,7 +12,9 @@ latex_journal_format(..., keep_tex = TRUE, citation_package = "natbib")
 \item{keep_tex}{Keep the intermediate tex file used in the conversion to PDF}
 
 \item{citation_package}{The LaTeX package to process citations, \code{natbib}
-or \code{biblatex}. Use \code{none} if neither package is to be used.}
+or \code{biblatex}. Use \code{default} if neither package is to be used,
+which means citations will be processed via the command
+\command{pandoc-citeproc}.}
 }
 \value{
 R Markdown output format to pass to
@@ -24,7 +26,7 @@ for creating a Journal of Statistical Software (JSS) articles. Adapted
 from \url{http://www.jstatsoft.org/about/submissions}.
 }
 \details{
-This format is largely based off of the \href{https://github.com/rstudio/rticles}{rticles}
+This format is largely based off of the \href{https://github.com/rstudio/rticles}{\code{rticles}}
 of \code{jss_article}.
 }
 \examples{
@@ -36,7 +38,7 @@ draft("MyArticle.Rmd", template = "latex_journal_format", package = "uiucthemes"
 
 }
 \references{
-\href{https://github.com/rstudio/rticles}{rticles} package by JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
+\href{https://github.com/rstudio/rticles}{\code{rticles}} package by JJ Allaire, R Foundation, Hadley Wickham, Journal of Statistical Software, Yihui Xie, Ramnath
 Vaidyanathan, Association for Computing Machinery, Carl Boettiger, Elsevier, Karl Broman, Kirill
 Mueller, Bastiaan Quast, Randall Pruim, Ben Marwick, Charlotte Wickham, Oliver Keyes and Miao Yu
 (2017). rticles: Article Formats for R Markdown. R package version 0.4.1.

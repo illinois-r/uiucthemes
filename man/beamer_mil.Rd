@@ -4,13 +4,25 @@
 \alias{beamer_mil}
 \title{Beamer Illinois Market Information Lab Presentation Template for RMarkdown}
 \usage{
-beamer_mil(toc = FALSE, slide_level = 3, incremental = FALSE,
-  fig_width = 10, fig_height = 7, fig_crop = TRUE,
-  fig_caption = TRUE, dev = "pdf", df_print = "default",
-  fonttheme = "default", highlight = "default", keep_tex = FALSE,
-  latex_engine = "pdflatex", citation_package = c("none", "natbib",
-  "biblatex"), includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL)
+beamer_mil(
+  toc = FALSE,
+  slide_level = 3,
+  incremental = FALSE,
+  fig_width = 10,
+  fig_height = 7,
+  fig_crop = TRUE,
+  fig_caption = TRUE,
+  dev = "pdf",
+  df_print = "default",
+  fonttheme = "default",
+  highlight = "default",
+  keep_tex = FALSE,
+  latex_engine = "pdflatex",
+  citation_package = c("default", "natbib", "biblatex"),
+  includes = NULL,
+  md_extensions = NULL,
+  pandoc_args = NULL
+)
 }
 \arguments{
 \item{toc}{\code{TRUE} to include a table of contents in the output (only
@@ -39,15 +51,16 @@ individual bullet you can precede it with \code{>}. For example:
 \item{dev}{Graphics device to use for figure output (defaults to pdf)}
 
 \item{df_print}{Method to be used for printing data frames. Valid values
-include "default", "kable", "tibble", and "paged". The "default" method uses
+include "default", "kable", "tibble", and "paged". The "default" method
+uses a corresponding S3 method of \code{print}, typically
 \code{print.data.frame}. The "kable" method uses the
 \code{\link[knitr:kable]{knitr::kable}} function. The "tibble" method uses
 the \pkg{tibble} package to print a summary of the data frame. The "paged"
 method creates a paginated HTML table (note that this method is only valid
-for formats that produce HTML). In addition
-to the named methods you can also pass an arbitrary function to be used
-for printing data frames. You can disable the \code{df_print} behavior entirely
-by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
+for formats that produce HTML). In addition to the named methods you can
+also pass an arbitrary function to be used for printing data frames. You
+can disable the \code{df_print} behavior entirely by setting the option
+\code{rmarkdown.df_print} to \code{FALSE}.}
 
 \item{fonttheme}{Beamer font theme (e.g. "structurebold").}
 
@@ -61,13 +74,15 @@ by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
 "pdflatex", "lualatex", and "xelatex".}
 
 \item{citation_package}{The LaTeX package to process citations, \code{natbib}
-or \code{biblatex}. Use \code{none} if neither package is to be used.}
+or \code{biblatex}. Use \code{default} if neither package is to be used,
+which means citations will be processed via the command
+\command{pandoc-citeproc}.}
 
 \item{includes}{Named list of additional content to include within the
-document (typically created using the \code{\link{includes}} function).}
+document (typically created using the \code{\link[rmarkdown]{includes}} function).}
 
 \item{md_extensions}{Markdown extensions to be added or removed from the
-default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
+default definition or R Markdown. See the \code{\link[rmarkdown]{rmarkdown_format}} for
 additional details.}
 
 \item{pandoc_args}{Additional command line options to pass to pandoc}

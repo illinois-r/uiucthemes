@@ -1,3 +1,20 @@
+# uiucthemes 0.3.1
+
+## CHANGES
+
+- Fixed `citation_package = 'none'` deprecation warning by changing
+  to `citation_package = 'default'` (thanks for the report [@noejn2](https://github.com/noejn2), [#21](https://github.com/illinois-r/uiucthemes/issues/21)) 
+- Bumped the dependency requirements to `rmarkdown` 2.2 and `xaringan` 0.16.0.
+
+## DOCUMENTATION
+
+- Re-built documentation under roxygen2 7.1.0
+- Modernized the README file
+
+## DEPLOYMENT
+
+- Switched from using TravisCI to GitHub Actions for continuous integration.
+
 # uiucthemes 0.3.0
 
 ## NEW
