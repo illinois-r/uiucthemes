@@ -1,11 +1,18 @@
 
-[![Travis-CI Build
-Status](https://travis-ci.org/illinois-r/uiucthemes.svg?branch=master)](https://travis-ci.org/illinois-r/uiucthemes)
+# UIUC Themes for R Markdown (`uiucthemes`)
+
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/coatless/uiucthemes/workflows/R-CMD-check/badge.svg)](https://github.com/coatless/uiucthemes/actions)
+[![Package-License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
+[![CRAN Version
+Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
-
-# UIUC Themes for R Markdown (`uiucthemes`)
+[![CRAN Status
+Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+<!-- badges: end -->
 
 The `uiucthemes` package includes a collection of UIUC-themed templates
 for presentations, journal articles, and exam templates.
@@ -35,8 +42,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'October 02, 2019'      # Month DD, YYYY (Main Slide)
-short-date: '10/02/2019' # MM/DD/YYYY (Lower Right)
+date: 'June 06, 2020'      # Month DD, YYYY (Main Slide)
+short-date: '06/06/2020' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -152,6 +159,25 @@ To access the development version of `uiucthemes`, e.g. not on CRAN,
 please use:
 
 ``` r
-install.packages("devtools")
-devtools::install_github("coatless/uiucthemes")
+if(!requireNamespace("remotes")) { install.packages("remotes") }
+remotes::install_github("coatless/uiucthemes")
 ```
+
+## Authors
+
+James Joseph Balamuta with contributions from Steven Andrew Culpepper,
+David Dalpiaz, and Jose Luis Rodriguez.
+
+## Citing the `uiucthemes` package
+
+To ensure future development of the package, please cite `uiucthemes`
+package if used for a presentation. Citation information for the package
+may be acquired by using in *R*:
+
+``` r
+citation("uiucthemes")
+```
+
+## License
+
+MIT - James Joseph Balamuta
