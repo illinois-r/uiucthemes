@@ -4,9 +4,13 @@
 \alias{html_imetropolis}
 \title{"Illinois" (UIUC) Metropolis themed HTML Template for RMarkdown}
 \usage{
-html_imetropolis(self_contained = FALSE, seal = TRUE,
+html_imetropolis(
+  self_contained = FALSE,
+  seal = TRUE,
   chakra = "https://remarkjs.com/downloads/remark-latest.min.js",
-  nature = list(), ...)
+  nature = list(),
+  ...
+)
 }
 \arguments{
 \item{self_contained}{Whether to produce a self-contained HTML file.}
@@ -16,7 +20,11 @@ metadata of the R Markdown document (if \code{FALSE}, you should write the
 title slide by yourself).}
 
 \item{chakra}{A path to the remark.js library (can be either local or
-remote).}
+remote). Please note that if you use the default remote latest version of
+remark.js, your slides will not work when you do not have Internet access.
+They might also be broken after a newer version of remark.js is released.
+If these issues concern you, you should download remark.js locally (e.g.,
+via \code{\link[xaringan]{summon_remark}()}), and use the local version instead.}
 
 \item{nature}{(Nature transformation) A list of configurations to be passed
 to \code{remark.create()}, e.g. \code{list(ratio = '16:9', navigation =
