@@ -25,7 +25,7 @@ Depends:
     R (>= 3.0)
 License: MIT + file LICENSE
 Imports:
-    rmarkdown (>= 2.2.0),
+    rmarkdown (>= 2.2),
     xaringan (>= 0.16.0)
 RoxygenNote: 7.1.0
 Roxygen: list(markdown = TRUE)
