@@ -9,3 +9,4 @@
 ^inst/rmarkdown/templates/thesis_pdf_ece$
 ^inst/rmarkdown/templates/cover_letter$
 ^inst/rmarkdown/templates/exam$
+^\.github$
