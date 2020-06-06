@@ -1,5 +1,6 @@
-# Borrowed from rticles to avoid having to deal w/ name space issues
-# Not exported
+# Borrowed several functions from rticles to avoid having to
+# deal with name space issues as they were not exported.
+# Though, we also do not export these functions.
 
 find_file <- function(template, file) {
   template <- system.file("rmarkdown", "templates", template, file,
