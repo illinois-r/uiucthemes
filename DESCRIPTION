@@ -1,7 +1,7 @@
 Package: uiucthemes
 Type: Package
 Title: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations
-Version: 0.3.0
+Version: 0.3.1
 Authors@R: c(
   person("James", "Balamuta", 
          email = "balamut2@illinois.edu", role = c("aut", "cre"),
