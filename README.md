@@ -8,10 +8,12 @@ status](https://github.com/coatless/uiucthemes/workflows/R-CMD-check/badge.svg)]
 [![Package-License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![CRAN Version
 Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+[![CRAN
+Status](https://cranchecks.info/badges/worst/uiucthemes)](https://cran.r-project.org/web/checks/check_results_uiucthemes.html)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes)
-[![CRAN Status
-Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/uiucthemes)](https://CRAN.R-project.org/package=uiucthemes)
 <!-- badges: end -->
 
 The `uiucthemes` package includes a collection of UIUC-themed templates
@@ -42,8 +44,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'June 06, 2020'      # Month DD, YYYY (Main Slide)
-short-date: '06/06/2020' # MM/DD/YYYY (Lower Right)
+date: 'June 07, 2020'      # Month DD, YYYY (Main Slide)
+short-date: '06/07/2020' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined

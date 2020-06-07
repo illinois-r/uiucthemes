@@ -18,8 +18,9 @@ knitr::opts_chunk$set(
 [![Package-License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![CRAN Version
 Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+[![CRAN Status](https://cranchecks.info/badges/worst/uiucthemes)](https://cran.r-project.org/web/checks/check_results_uiucthemes.html)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes) 
-[![CRAN Status Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
+[![CRAN status](https://www.r-pkg.org/badges/version/uiucthemes)](https://CRAN.R-project.org/package=uiucthemes)
 <!-- badges: end -->
 
 The `uiucthemes` package includes a collection of UIUC-themed templates for
