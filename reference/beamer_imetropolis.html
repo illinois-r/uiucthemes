@@ -187,8 +187,10 @@ individual bullet you can precede it with <code>&gt;</code>. For example:
     </tr>
     <tr>
       <th>fig_crop</th>
-      <td><p><code>TRUE</code> to automatically apply the <code>pdfcrop</code> utility
-(if available) to pdf figures</p></td>
+      <td><p>Whether to crop PDF figures with the command
+<code class='command'>pdfcrop</code>. This requires the tools <code class='command'>pdfcrop</code> and
+<code class='command'>ghostscript</code> to be installed. By default, <code>fig_crop = TRUE</code>
+if these two tools are available.</p></td>
     </tr>
     <tr>
       <th>fig_caption</th>
@@ -210,7 +212,9 @@ method creates a paginated HTML table (note that this method is only valid
 for formats that produce HTML). In addition to the named methods you can
 also pass an arbitrary function to be used for printing data frames. You
 can disable the <code>df_print</code> behavior entirely by setting the option
-<code>rmarkdown.df_print</code> to <code>FALSE</code>.</p></td>
+<code>rmarkdown.df_print</code> to <code>FALSE</code>. See
+<a href='https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing'>Data
+frame printing section</a> in bookdown book for examples.</p></td>
     </tr>
     <tr>
       <th>fonttheme</th>
@@ -229,7 +233,7 @@ can disable the <code>df_print</code> behavior entirely by setting the option
     <tr>
       <th>latex_engine</th>
       <td><p>LaTeX engine for producing PDF output. Options are
-"pdflatex", "lualatex", and "xelatex".</p></td>
+"pdflatex", "lualatex", "xelatex" and "tectonic".</p></td>
     </tr>
     <tr>
       <th>citation_package</th>

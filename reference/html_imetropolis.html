@@ -147,7 +147,9 @@ colors and identity standards based on the Metropolis theme.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>self_contained</th>
-      <td><p>Whether to produce a self-contained HTML file.</p></td>
+      <td><p>Whether to produce a self-contained HTML file by
+embedding all external resources into the HTML file. See the &#8216;Note&#8217;
+section below.</p></td>
     </tr>
     <tr>
       <th>seal</th>
@@ -172,18 +174,21 @@ list(click = TRUE))</a></code>; see
 <a href='https://github.com/gnab/remark/wiki/Configuration'>https://github.com/gnab/remark/wiki/Configuration</a>. Besides the
 options provided by remark.js, you can also set <code>autoplay</code> to a number
 (the number of milliseconds) so the slides will be played every
-<code>autoplay</code> milliseconds. You can also set <code>countdown</code> to a number
-(the number of milliseconds) to include a countdown timer on each slide. If
-using <code>autoplay</code>, you can optionally set <code>countdown</code> to
-<code>TRUE</code> to include a countdown equal to <code>autoplay</code>. To alter the
-set of classes applied to the title slide, you can optionally set
-<code>titleSlideClass</code> to a vector of classes; the default is
-<code><a href='https://rdrr.io/r/base/c.html'>c("center", "middle", "inverse")</a></code>.</p></td>
+<code>autoplay</code> milliseconds; alternatively, <code>autoplay</code> can be a list
+of the form <code><a href='https://rdrr.io/r/base/list.html'>list(interval = N, loop = TRUE)</a></code>, so the slides will go
+to the next page every <code>N</code> milliseconds, and optionally go back to the
+first page to restart the play when <code>loop = TRUE</code>. You can also set
+<code>countdown</code> to a number (the number of milliseconds) to include a
+countdown timer on each slide. If using <code>autoplay</code>, you can optionally
+set <code>countdown</code> to <code>TRUE</code> to include a countdown equal to
+<code>autoplay</code>. To alter the set of classes applied to the title slide,
+you can optionally set <code>titleSlideClass</code> to a vector of classes; the
+default is <code><a href='https://rdrr.io/r/base/c.html'>c("center", "middle", "inverse")</a></code>.</p></td>
     </tr>
     <tr>
       <th>...</th>
-      <td><p>For <code>tsukuyomi()</code>, arguments passed to <code>moon_reader()</code>;
-for <code>moon_reader()</code>, arguments passed to
+      <td><p>For <code>tsukuyomi()</code>, arguments passed to
+<code>moon_reader()</code>; for <code>moon_reader()</code>, arguments passed to
 <code><a href='https://pkgs.rstudio.com/rmarkdown/reference/html_document.html'>rmarkdown::html_document()</a></code>.</p></td>
     </tr>
     </table>
