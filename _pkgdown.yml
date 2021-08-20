@@ -1,0 +1,13 @@
+url: https://illinois-r.github.io/uiucthemes
+
+home:
+  strip_header: true
+
+development:
+  mode: auto
+
+authors:
+  James Joseph Balamuta:
+    href: https://thecoatlessprofessor.com
+  Steven Andrew Culpepper:
+    href: http://publish.illinois.edu/sculpepper/
