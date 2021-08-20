@@ -1,9 +1,13 @@
 # uiucthemes 0.3.2
 
+## CHANGES
+
+- Fixed path to example images on the README page.  ([#24](https://github.com/illinois-r/uiucthemes/pulls/24)) 
+
 ## DEPLOYMENT
 
-- Added a pkgdown website.
-- Updated GitHub Actions Runner to use tag references.
+- Added a pkgdown website.  ([#23](https://github.com/illinois-r/uiucthemes/pulls/23)) 
+- Updated GitHub Actions Runner to use tag references. ([#23](https://github.com/illinois-r/uiucthemes/pulls/23)) 
 
 # uiucthemes 0.3.1
 
