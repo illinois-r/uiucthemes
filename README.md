@@ -21,15 +21,15 @@ for presentations, journal articles, and exam templates.
 
 Included in the package are:
 
-  - `beamer_illinois`: Illinois colored header boxes
-  - `beamer_orange`: Minimialist slides with a color preference to
+-   `beamer_illinois`: Illinois colored header boxes
+-   `beamer_orange`: Minimialist slides with a color preference to
     orange.
-  - `beamer_mil`: Beamer Market Information Lab (MIL)
-  - `beamer_imetropolis`: Metropolis Theme with Illinois colors for
+-   `beamer_mil`: Beamer Market Information Lab (MIL)
+-   `beamer_imetropolis`: Metropolis Theme with Illinois colors for
     Beamer.
-  - `html_imetropolis`: `xaringan`-powered Metropolis Theme for
+-   `html_imetropolis`: `xaringan`-powered Metropolis Theme for
     Illinois.
-  - `latex_journal_report`: initial implementation of a journal entry
+-   `latex_journal_report`: initial implementation of a journal entry
     for a class.
 
 Screenshots of each template are included in package overview vignette.
@@ -44,8 +44,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'June 07, 2020'      # Month DD, YYYY (Main Slide)
-short-date: '06/07/2020' # MM/DD/YYYY (Lower Right)
+date: 'August 19, 2021'      # Month DD, YYYY (Main Slide)
+short-date: '08/19/2021' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -93,63 +93,58 @@ Hello Equation \ref{eq:binom}
 
 This generates:
 
-![](tools/readme/beamer_illinois_slide_example.png)
+![](https://raw.githubusercontent.com/illinois-r/uiucthemes/main/tools/readme/beamer_illinois_slide_example.png)
 
 ## Materials Referenced
 
-  - [Custom Document
+-   [Custom Document
     Templates](http://rmarkdown.rstudio.com/developer_document_templates.html)
     / [Custom
     Formats](http://rmarkdown.rstudio.com/developer_custom_formats.html)
-  - [Beamer Presentation
+-   [Beamer Presentation
     Format](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
-  - [LaTeX Generic Pandoc
+-   [LaTeX Generic Pandoc
     Template](https://github.com/jgm/pandoc-templates/blob/db59a5e77b0a5629f0801eb82103814842f2e2ed/default.latex)
-  - [`rticles` An R Package](https://github.com/rstudio/rticles)
+-   [`rticles` An R Package](https://github.com/rstudio/rticles)
 
 ### Prerequisites
 
-  - LaTeX Distribution
-      - Windows: <http://miktex.org/download>
-      - Mac: <http://tug.org/mactex/mactex-download.html>
+-   LaTeX Distribution
+    -   Windows: <http://miktex.org/download>
+    -   Mac: <http://tug.org/mactex/mactex-download.html>
 
 ### Using `uiucthemes` from RStudio
 
 To use **uiucthemes** from RStudio:
 
-1)  Install the latest
+1.  Install the latest
     [RStudio](http://www.rstudio.com/products/rstudio/download/).
 
-2)  Install the **uiucthemes** package:
-
-<!-- end list -->
+2.  Install the **uiucthemes** package:
 
 ``` r
 install.packages(c("rmarkdown","uiucthemes"))
 ```
 
-3)  Use the **New R Markdown** dialog to create an article from one of
+3.  Use the **New R Markdown** dialog to create an article from one of
     the templates:
 
-![New R Markdown](tools/readme/uiucthemes.png)
+![New R
+Markdown](https://raw.githubusercontent.com/illinois-r/uiucthemes/main/tools/readme/uiucthemes.png)
 
 ### Using `uiucthemes` outside of RStudio
 
-1)  Install [pandoc](http://johnmacfarlane.net/pandoc/) using the
+1.  Install [pandoc](http://johnmacfarlane.net/pandoc/) using the
     [instructions for your
     platform](https://github.com/rstudio/rmarkdown/blob/bd5c509c888bfd309ef059ae6cbdeb408ec53d66/vignettes/pandoc.Rmd).
 
-2)  Install the **rmarkdown** and **uiucthemes** packages:
-
-<!-- end list -->
+2.  Install the **rmarkdown** and **uiucthemes** packages:
 
 ``` r
 install.packages(c("rmarkdown","uiucthemes"))
 ```
 
-3)  Use the `rmarkdown::draft` function to create articles:
-
-<!-- end list -->
+3.  Use the `rmarkdown::draft` function to create articles:
 
 ``` r
 rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
