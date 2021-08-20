@@ -1,3 +1,10 @@
+# uiucthemes 0.3.2
+
+## DEPLOYMENT
+
+- Added a pkgdown website.
+- Updated GitHub Actions Runner to use tag references.
+
 # uiucthemes 0.3.1
 
 ## CHANGES

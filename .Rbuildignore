@@ -10,3 +10,6 @@
 ^inst/rmarkdown/templates/cover_letter$
 ^inst/rmarkdown/templates/exam$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
