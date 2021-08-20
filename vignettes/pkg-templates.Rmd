@@ -42,11 +42,11 @@ Included in the package are:
 
 #### `beamer_imetropolis`
 
-![`beamer_imetropolis` Beamer LaTeX Template](beamer_imetropolis.png){width=300px height=400px}
+![`beamer_imetropolis` Beamer LaTeX Template](beamer_imetropolis.png){width=600px height=500px}
 
 
 ### HTML
 
 #### `html_imetropolis`
 
-![`html_imetropolis` HTML Template](html_imetropolis.png){width=300px height=400px}
+![`html_imetropolis` HTML Template](html_imetropolis.png){width=600px height=500px}
