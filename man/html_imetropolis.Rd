@@ -45,9 +45,7 @@ set \code{countdown} to \code{TRUE} to include a countdown equal to
 you can optionally set \code{titleSlideClass} to a vector of classes; the
 default is \code{c("center", "middle", "inverse")}.}
 
-\item{...}{For \code{tsukuyomi()}, arguments passed to
-\code{moon_reader()}; for \code{moon_reader()}, arguments passed to
-\code{rmarkdown::\link{html_document}()}.}
+\item{...}{Additional parameters passed to \code{\link[xaringan:moon_reader]{xaringan::moon_reader()}}.}
 }
 \value{
 A modified \code{\link[xaringan:moon_reader]{xaringan::moon_reader()}} based on the "Illinois" (UIUC)
