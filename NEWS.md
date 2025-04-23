@@ -1,3 +1,10 @@
+# uiucthemes 0.3.3
+
+## CHANGES
+
+- Handled URL changes ([#29](https://github.com/illinois-r/uiucthemes/pulls/29)) 
+- Addressed CRAN feedback regarding outdated inherited documentation ([#27](https://github.com/illinois-r/uiucthemes/pulls/27)) 
+
 # uiucthemes 0.3.2
 
 ## CHANGES
