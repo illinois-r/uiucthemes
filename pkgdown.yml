@@ -1,10 +1,9 @@
-pandoc: 2.7.3
-pkgdown: 1.6.1
+pandoc: 3.1.11
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   pkg-templates: pkg-templates.html
-last_built: 2021-08-20T04:34Z
+last_built: 2025-04-23T06:11Z
 urls:
   reference: https://illinois-r.github.io/uiucthemes/reference
   article: https://illinois-r.github.io/uiucthemes/articles
-
