@@ -22,7 +22,7 @@ which means citations will be processed via the command
 }
 \value{
 R Markdown output format to pass to
-\code{\link[rmarkdown::render]{render}}
+\code{rmarkdown::render}
 }
 \description{
 Modified version of the Journal of Statistical Software (JSS) Format
