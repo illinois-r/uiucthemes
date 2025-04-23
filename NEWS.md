@@ -79,8 +79,8 @@
 
 ## CHANGES
 
-- UIUC recently adopted [new identity standards](http://brand.illinois.edu/). This version of `uiucthemes` applies the new guidelines in two ways:
-    1. the ["Column I" logo](https://news.illinois.edu/view/6367/543635#image-2) to the ["Block I" logo](https://news.illinois.edu/view/6367/543635#image-1).
+- UIUC recently adopted [new identity standards](https://brand.illinois.edu/). This version of `uiucthemes` applies the new guidelines in two ways:
+    1. the ["Column I" logo](https://news.illinois.edu/urbana-campus-consolidates-to-single-logo/) to the ["Block I" logo](https://news.illinois.edu/urbana-campus-consolidates-to-single-logo/).
     2. Orange and Blue colors have been updated... 
         - **Orange**: `#f47f24` / `rgb(244,127,36)` to `#d75536` / `rgb(215,85,54)`
         - **Blue**: `#003c7d` / `rgb(0,60,125)` to `#1d2639` / `rgb(29,38,57)`

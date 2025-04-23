@@ -4,14 +4,14 @@
 <!-- badges: start -->
 
 [![R build
-status](https://github.com/coatless/uiucthemes/workflows/R-CMD-check/badge.svg)](https://github.com/coatless/uiucthemes/actions)
+status](https://github.com/coatless/uiucthemes/workflows/R-CMD-check/badge.svg)](https://github.com/illinois-r/uiucthemes/actions)
 [![Package-License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
 [![CRAN Version
 Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
 [![CRAN
 Status](https://cranchecks.info/badges/worst/uiucthemes)](https://cran.r-project.org/web/checks/check_results_uiucthemes.html)
 [![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](http://www.r-pkg.org/pkg/uiucthemes)
+downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](https://www.r-pkg.org:443/pkg/uiucthemes)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/uiucthemes)](https://CRAN.R-project.org/package=uiucthemes)
 <!-- badges: end -->
@@ -98,11 +98,11 @@ This generates:
 ## Materials Referenced
 
 -   [Custom Document
-    Templates](http://rmarkdown.rstudio.com/developer_document_templates.html)
+    Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html)
     / [Custom
-    Formats](http://rmarkdown.rstudio.com/developer_custom_formats.html)
+    Formats](https://bookdown.org/yihui/rmarkdown/new-formats.html)
 -   [Beamer Presentation
-    Format](http://rmarkdown.rstudio.com/beamer_presentation_format.html)
+    Format](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html)
 -   [LaTeX Generic Pandoc
     Template](https://github.com/jgm/pandoc-templates/blob/db59a5e77b0a5629f0801eb82103814842f2e2ed/default.latex)
 -   [`rticles` An R Package](https://github.com/rstudio/rticles)
@@ -110,15 +110,15 @@ This generates:
 ### Prerequisites
 
 -   LaTeX Distribution
-    -   Windows: <http://miktex.org/download>
-    -   Mac: <http://tug.org/mactex/mactex-download.html>
+    -   Windows: <https://miktex.org/download>
+    -   Mac: <https://tug.org/mactex/mactex-download.html>
 
 ### Using `uiucthemes` from RStudio
 
 To use **uiucthemes** from RStudio:
 
 1.  Install the latest
-    [RStudio](http://www.rstudio.com/products/rstudio/download/).
+    [RStudio](https://posit.co/download/rstudio-desktop/).
 
 2.  Install the **uiucthemes** package:
 
@@ -134,7 +134,7 @@ Markdown](https://raw.githubusercontent.com/illinois-r/uiucthemes/main/tools/rea
 
 ### Using `uiucthemes` outside of RStudio
 
-1.  Install [pandoc](http://johnmacfarlane.net/pandoc/) using the
+1.  Install [pandoc](https://johnmacfarlane.net/pandoc/) using the
     [instructions for your
     platform](https://github.com/rstudio/rmarkdown/blob/bd5c509c888bfd309ef059ae6cbdeb408ec53d66/vignettes/pandoc.Rmd).
 
