@@ -9,7 +9,7 @@ status](https://github.com/coatless/uiucthemes/workflows/R-CMD-check/badge.svg)]
 [![CRAN Version
 Badge](http://www.r-pkg.org/badges/version/uiucthemes)](https://cran.r-project.org/package=uiucthemes)
 [![CRAN
-Status](https://cranchecks.info/badges/worst/uiucthemes)](https://cran.r-project.org/web/checks/check_results_uiucthemes.html)
+Status](https://badges.cranchecks.info/worst/uiucthemes.svg)](https://cran.r-project.org/web/checks/check_results_uiucthemes.html)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/uiucthemes)](https://www.r-pkg.org:443/pkg/uiucthemes)
 [![CRAN
@@ -21,16 +21,14 @@ for presentations, journal articles, and exam templates.
 
 Included in the package are:
 
--   `beamer_illinois`: Illinois colored header boxes
--   `beamer_orange`: Minimialist slides with a color preference to
-    orange.
--   `beamer_mil`: Beamer Market Information Lab (MIL)
--   `beamer_imetropolis`: Metropolis Theme with Illinois colors for
-    Beamer.
--   `html_imetropolis`: `xaringan`-powered Metropolis Theme for
-    Illinois.
--   `latex_journal_report`: initial implementation of a journal entry
-    for a class.
+- `beamer_illinois`: Illinois colored header boxes
+- `beamer_orange`: Minimialist slides with a color preference to orange.
+- `beamer_mil`: Beamer Market Information Lab (MIL)
+- `beamer_imetropolis`: Metropolis Theme with Illinois colors for
+  Beamer.
+- `html_imetropolis`: `xaringan`-powered Metropolis Theme for Illinois.
+- `latex_journal_report`: initial implementation of a journal entry for
+  a class.
 
 Screenshots of each template are included in package overview vignette.
 
@@ -44,8 +42,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'August 19, 2021'      # Month DD, YYYY (Main Slide)
-short-date: '08/19/2021' # MM/DD/YYYY (Lower Right)
+date: 'April 22, 2025'      # Month DD, YYYY (Main Slide)
+short-date: '04/22/2025' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -97,54 +95,58 @@ This generates:
 
 ## Materials Referenced
 
--   [Custom Document
-    Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html)
-    / [Custom
-    Formats](https://bookdown.org/yihui/rmarkdown/new-formats.html)
--   [Beamer Presentation
-    Format](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html)
--   [LaTeX Generic Pandoc
-    Template](https://github.com/jgm/pandoc-templates/blob/db59a5e77b0a5629f0801eb82103814842f2e2ed/default.latex)
--   [`rticles` An R Package](https://github.com/rstudio/rticles)
+- [Custom Document
+  Templates](https://bookdown.org/yihui/rmarkdown/document-templates.html)
+  / [Custom
+  Formats](https://bookdown.org/yihui/rmarkdown/new-formats.html)
+- [Beamer Presentation
+  Format](https://bookdown.org/yihui/rmarkdown/beamer-presentation.html)
+- [LaTeX Generic Pandoc
+  Template](https://github.com/jgm/pandoc-templates/blob/db59a5e77b0a5629f0801eb82103814842f2e2ed/default.latex)
+- [`rticles` An R Package](https://github.com/rstudio/rticles)
 
 ### Prerequisites
 
--   LaTeX Distribution
-    -   Windows: <https://miktex.org/download>
-    -   Mac: <https://tug.org/mactex/mactex-download.html>
+- LaTeX Distribution
+  - Windows: <https://miktex.org/download>
+  - Mac: <https://tug.org/mactex/mactex-download.html>
 
 ### Using `uiucthemes` from RStudio
 
 To use **uiucthemes** from RStudio:
 
-1.  Install the latest
+1)  Install the latest
     [RStudio](https://posit.co/download/rstudio-desktop/).
 
-2.  Install the **uiucthemes** package:
+2)  Install the **uiucthemes** package:
 
 ``` r
 install.packages(c("rmarkdown","uiucthemes"))
 ```
 
-3.  Use the **New R Markdown** dialog to create an article from one of
+3)  Use the **New R Markdown** dialog to create an article from one of
     the templates:
 
-![New R
-Markdown](https://raw.githubusercontent.com/illinois-r/uiucthemes/main/tools/readme/uiucthemes.png)
+<figure>
+<img
+src="https://raw.githubusercontent.com/illinois-r/uiucthemes/main/tools/readme/uiucthemes.png"
+alt="New R Markdown" />
+<figcaption aria-hidden="true">New R Markdown</figcaption>
+</figure>
 
 ### Using `uiucthemes` outside of RStudio
 
-1.  Install [pandoc](https://johnmacfarlane.net/pandoc/) using the
+1)  Install [pandoc](https://johnmacfarlane.net/pandoc/) using the
     [instructions for your
     platform](https://github.com/rstudio/rmarkdown/blob/bd5c509c888bfd309ef059ae6cbdeb408ec53d66/vignettes/pandoc.Rmd).
 
-2.  Install the **rmarkdown** and **uiucthemes** packages:
+2)  Install the **rmarkdown** and **uiucthemes** packages:
 
 ``` r
 install.packages(c("rmarkdown","uiucthemes"))
 ```
 
-3.  Use the `rmarkdown::draft` function to create articles:
+3)  Use the `rmarkdown::draft` function to create articles:
 
 ``` r
 rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
