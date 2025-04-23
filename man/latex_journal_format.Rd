@@ -22,12 +22,12 @@ which means citations will be processed via the command
 }
 \value{
 R Markdown output format to pass to
-\code{\link[rmarkdown:render]{render}}
+\code{\link[rmarkdown::render]{render}}
 }
 \description{
 Modified version of the Journal of Statistical Software (JSS) Format
 for creating a Journal of Statistical Software (JSS) articles. Adapted
-from \url{http://www.jstatsoft.org/about/submissions}.
+from \url{https://www.jstatsoft.org/about/submissions}.
 }
 \details{
 This format is largely based off of the \href{https://github.com/rstudio/rticles}{\code{rticles}}

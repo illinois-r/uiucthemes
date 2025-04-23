@@ -8,7 +8,7 @@
 #' @param ... Arguments to \code{rmarkdown::pdf_document}
 #'
 #' @return R Markdown output format to pass to
-#'   \code{\link[rmarkdown:render]{render}}
+#'   \code{\link[rmarkdown::render]{render}}
 #'
 #' @details
 #' This format is largely based off of the [`rticles`](https://github.com/rstudio/rticles)
