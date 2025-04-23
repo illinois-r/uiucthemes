@@ -6,9 +6,7 @@
 \alias{uiucthemes-package}
 \title{uiucthemes: 'R' 'Markdown' Themes for 'UIUC' Documents and Presentations}
 \description{
-A set of custom 'R' 'Markdown' templates for documents and
-   presentations with the University of Illinois at Urbana-Champaign (UIUC)
-   color scheme and identity standards.
+A set of custom 'R' 'Markdown' templates for documents and presentations with the University of Illinois at Urbana-Champaign (UIUC) color scheme and identity standards.
 }
 \details{
 Trial run on RMarkdown templates
@@ -17,7 +15,7 @@ Trial run on RMarkdown templates
 Useful links:
 \itemize{
   \item \url{https://github.com/illinois-r/uiucthemes}
-  \item \url{http://thecoatlessprofessor.com/projects/uiucthemes/}
+  \item \url{https://blog.thecoatlessprofessor.com}
   \item Report bugs at \url{https://github.com/illinois-r/uiucthemes/issues}
 }
 
