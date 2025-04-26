@@ -4,6 +4,7 @@
 #' colors and identity standards based on the Metropolis theme.
 #'
 #' @inheritParams xaringan::moon_reader
+#' @param ... Additional parameters passed to [xaringan::moon_reader()].
 #'
 #' @return
 #' A modified [xaringan::moon_reader()] based on the "Illinois" (UIUC)

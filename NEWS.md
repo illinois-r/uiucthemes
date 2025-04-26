@@ -1,4 +1,15 @@
-# uiucthemes 0.3.2
+# uiucthemes 0.3.3
+
+## CHANGES
+
+- Handled URL changes ([#29](https://github.com/illinois-r/uiucthemes/pulls/29)) 
+- Addressed CRAN feedback regarding outdated inherited documentation ([#27](https://github.com/illinois-r/uiucthemes/pulls/27)) 
+
+## DEPLOYMENT
+
+- Updated GitHub Actions to use new versions of `R-CMD-Check` and `pkgdown`. ([#28](https://github.com/illinois-r/uiucthemes/pull/28)) 
+
+# uiucthemes 0.3.2 (GitHub-only)
 
 ## CHANGES
 
@@ -79,8 +90,8 @@
 
 ## CHANGES
 
-- UIUC recently adopted [new identity standards](http://brand.illinois.edu/). This version of `uiucthemes` applies the new guidelines in two ways:
-    1. the ["Column I" logo](https://news.illinois.edu/view/6367/543635#image-2) to the ["Block I" logo](https://news.illinois.edu/view/6367/543635#image-1).
+- UIUC recently adopted [new identity standards](https://brand.illinois.edu/). This version of `uiucthemes` applies the new guidelines in two ways:
+    1. the ["Column I" logo](https://news.illinois.edu/urbana-campus-consolidates-to-single-logo/) to the ["Block I" logo](https://news.illinois.edu/urbana-campus-consolidates-to-single-logo/).
     2. Orange and Blue colors have been updated... 
         - **Orange**: `#f47f24` / `rgb(244,127,36)` to `#d75536` / `rgb(215,85,54)`
         - **Blue**: `#003c7d` / `rgb(0,60,125)` to `#1d2639` / `rgb(29,38,57)`
