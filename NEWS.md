@@ -5,7 +5,11 @@
 - Handled URL changes ([#29](https://github.com/illinois-r/uiucthemes/pulls/29)) 
 - Addressed CRAN feedback regarding outdated inherited documentation ([#27](https://github.com/illinois-r/uiucthemes/pulls/27)) 
 
-# uiucthemes 0.3.2
+## DEPLOYMENT
+
+- Updated GitHub Actions to use new versions of `R-CMD-Check` and `pkgdown`. ([#28](https://github.com/illinois-r/uiucthemes/pull/28)) 
+
+# uiucthemes 0.3.2 (GitHub-only)
 
 ## CHANGES
 
