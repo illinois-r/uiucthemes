@@ -2,13 +2,13 @@
 #'
 #' Modified version of the Journal of Statistical Software (JSS) Format
 #' for creating a Journal of Statistical Software (JSS) articles. Adapted
-#' from <http://www.jstatsoft.org/about/submissions>.
+#' from <https://www.jstatsoft.org/about/submissions>.
 #'
 #' @inheritParams rmarkdown::pdf_document
-#' @param ... Arguments to \code{rmarkdown::pdf_document}
+#' @param ... Arguments to `rmarkdown::pdf_document`
 #'
 #' @return R Markdown output format to pass to
-#'   \code{rmarkdown::render}
+#'   `rmarkdown::render`
 #'
 #' @details
 #' This format is largely based off of the [`rticles`](https://github.com/rstudio/rticles)
