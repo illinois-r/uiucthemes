@@ -131,7 +131,7 @@ install.packages(c("rmarkdown","uiucthemes"))
     
 ### Using `uiucthemes` outside of RStudio
 
-1) Install [pandoc](https://johnmacfarlane.net/pandoc/) using the
+1) Install [pandoc](https://pandoc.org/) using the
    [instructions for your platform](https://github.com/rstudio/rmarkdown/blob/bd5c509c888bfd309ef059ae6cbdeb408ec53d66/vignettes/pandoc.Rmd).
 
 2) Install the **rmarkdown** and **uiucthemes** packages:

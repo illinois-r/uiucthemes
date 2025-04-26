@@ -42,8 +42,8 @@ title: '"Illinois" UIUC Beamer Theme'
 short-title: "Beamer Slides"
 author: "John and Mary Doe"
 short-author: "J & M Doe"
-date: 'April 22, 2025'      # Month DD, YYYY (Main Slide)
-short-date: '04/22/2025' # MM/DD/YYYY (Lower Right)
+date: 'April 26, 2025'      # Month DD, YYYY (Main Slide)
+short-date: '04/26/2025' # MM/DD/YYYY (Lower Right)
 institute: "University of Illinois at Urbana-Champaign"
 short-institute: "UIUC"
 department: "Department of Magic"                # Institute must be defined
@@ -136,8 +136,8 @@ alt="New R Markdown" />
 
 ### Using `uiucthemes` outside of RStudio
 
-1)  Install [pandoc](https://johnmacfarlane.net/pandoc/) using the
-    [instructions for your
+1)  Install [pandoc](https://pandoc.org/) using the [instructions for
+    your
     platform](https://github.com/rstudio/rmarkdown/blob/bd5c509c888bfd309ef059ae6cbdeb408ec53d66/vignettes/pandoc.Rmd).
 
 2)  Install the **rmarkdown** and **uiucthemes** packages:
