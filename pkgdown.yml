@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   pkg-templates: pkg-templates.html
-last_built: 2025-04-26T22:44Z
+last_built: 2025-04-26T23:10Z
 urls:
   reference: https://illinois-r.github.io/uiucthemes/reference
   article: https://illinois-r.github.io/uiucthemes/articles
