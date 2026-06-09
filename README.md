@@ -75,9 +75,10 @@ Prefer to write slides in plain LaTeX? A self-contained beamer theme lives in
 % \usetheme{illinoisclassic}  % traditional blue/orange header boxes
 ```
 
-The trademarked University wordmark is intentionally not bundled; the modern
-theme renders a typographic wordmark and exposes `\insertillinoiswordmark` so
-authorized users can drop in the official logo. See
+The official Illinois wordmark and block-I are bundled (included with
+University permission and governed by the University brand guidelines, not the
+MIT license). Use the `nowordmark` option to suppress them or redefine
+`\insertillinoiswordmark` to substitute your own. See
 [`latex/illinois/README.md`](latex/illinois/README.md) for installation and
 options.
 

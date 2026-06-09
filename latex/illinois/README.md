@@ -75,17 +75,26 @@ then run `texhash` (TeX Live) if you installed into a texmf tree.
 
 ## The University logo / wordmark
 
-The official Illinois wordmark and block-I are **registered trademarks of the
-University of Illinois** and are therefore *not* bundled with this package. By
-default the modern theme renders a plain typographic "Illinois" wordmark on the
-title page. If you are authorized to use the official mark, drop it in locally:
+The official Illinois marks are bundled with this package:
+
+- `illinois-wordmark.png` — horizontal orange wordmark (title page).
+- `illinois-wordmark-reverse.png` — reversed/white wordmark (blue frame-title bar).
+- `illinois-blocki.pdf` — block-I (classic theme title slide).
+
+The modern theme shows the wordmark on the title page and in each frame-title
+bar; the classic theme places the block-I on the title slide. Use the
+`nowordmark` option to suppress the modern theme's wordmarks, or redefine the
+mark to substitute your own image:
 
 ```latex
 \renewcommand{\insertillinoiswordmark}{\includegraphics[height=6mm]{your-logo}}
 ```
 
-University brand assets and usage guidelines are available at
-<https://creativeservices.illinois.edu/brand/>.
+> **Trademark notice.** The Illinois wordmark and block-I are registered
+> trademarks of the Board of Trustees of the University of Illinois and are
+> included here with permission. They are *not* covered by the MIT license that
+> governs the rest of this package; their use is subject to the University's
+> brand and identity guidelines: <https://creativeservices.illinois.edu/brand/>.
 
 ## Files
 
@@ -98,6 +107,9 @@ University brand assets and usage guidelines are available at
 | `beamerouterthemeillinois.sty`         | Frame-title bar, footline, no navigation |
 | `beamerthemeillinoisclassic.sty`       | Classic theme entry point                |
 | `beamercolorthemeillinoisclassic.sty`  | Classic color theme                      |
+| `illinois-wordmark.png`                | Orange horizontal wordmark               |
+| `illinois-wordmark-reverse.png`        | Reversed/white horizontal wordmark       |
+| `illinois-blocki.pdf`                  | Block-I logo                             |
 | `illinois-demo.tex`                    | Demo / reference deck (modern)           |
 | `illinoisclassic-demo.tex`             | Demo deck (classic)                      |
 
@@ -106,7 +118,10 @@ frame totals settle).
 
 ## License
 
-Released under the MIT License. See [`LICENSE`](LICENSE).
+The theme code is released under the MIT License. See [`LICENSE`](LICENSE).
+The bundled University of Illinois marks are trademarks of the University,
+included with permission, and are governed by the University's brand guidelines
+rather than the MIT license (see the trademark notice above).
 
 ## Author
 

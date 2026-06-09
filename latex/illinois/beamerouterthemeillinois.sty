@@ -12,6 +12,21 @@
 
 \mode<presentation>
 
+% Make the theme usable even if the outer theme is loaded on its own.
+\@ifundefined{ifillinois@wordmark}{\newif\ifillinois@wordmark\illinois@wordmarktrue}{}
+
+% Reversed (white) Illinois wordmark shown at the right of the blue frame-title
+% bar. Tied to the `nowordmark` theme option; degrades to nothing if missing.
+\ifillinois@wordmark
+  \IfFileExists{illinois-wordmark-reverse.png}{%
+    \def\illinois@frametitlelogo{%
+      \raisebox{-0.3ex}{\includegraphics[height=1.6ex,keepaspectratio]%
+        {illinois-wordmark-reverse}}}%
+  }{\def\illinois@frametitlelogo{}}
+\else
+  \def\illinois@frametitlelogo{}
+\fi
+
 % Hide the navigation symbols clutter.
 \setbeamertemplate{navigation symbols}{}
 
@@ -27,7 +42,7 @@
       \hskip1ex{\usebeamercolor[fg]{framesubtitle}%
         \usebeamerfont{framesubtitle}\insertframesubtitle}%
     \fi
-    \hfill\hspace*{1.5ex}%
+    \hfill\illinois@frametitlelogo\hspace*{1.5ex}%
   \end{beamercolorbox}%
 }
 

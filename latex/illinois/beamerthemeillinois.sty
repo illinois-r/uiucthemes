@@ -40,14 +40,19 @@
 \useinnertheme{illinois}
 \useoutertheme{illinois}
 
-% --- Typographic Illinois wordmark -----------------------------------------
-% Self-contained text mark used in place of the trademarked University logo.
-% Users may redefine it, e.g. to drop in an official wordmark image:
+% --- Illinois wordmark -----------------------------------------------------
+% The bundled horizontal Illinois wordmark (orange, for the light title page).
+% Users may redefine it, e.g. to substitute a different official mark:
 %   \renewcommand{\insertillinoiswordmark}{\includegraphics[height=6mm]{logo}}
+% Falls back to a typographic wordmark if the image is unavailable.
 \ifillinois@wordmark
-  \newcommand{\insertillinoiswordmark}{%
-    {\usebeamerfont{institute}\bfseries\scshape
-      \textcolor{illinoisblue}{Illinois}}%
+  \IfFileExists{illinois-wordmark.png}{%
+    \newcommand{\insertillinoiswordmark}{%
+      \includegraphics[height=7mm,keepaspectratio]{illinois-wordmark}}%
+  }{%
+    \newcommand{\insertillinoiswordmark}{%
+      {\usebeamerfont{institute}\bfseries\scshape
+        \textcolor{illinoisblue}{Illinois}}}%
   }
 \else
   \newcommand{\insertillinoiswordmark}{}

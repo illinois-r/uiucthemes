@@ -35,8 +35,17 @@ Comment: Quarto Beamer theme extensions porting the package's RMarkdown
    Beamer templates. They build on the Metropolis beamer theme by
    Matthias Vogelgesang (https://github.com/matze/mtheme).
 
-Files: latex/illinois/*
+Files: latex/illinois/*.sty latex/illinois/*.tex
 Copyright: James Joseph Balamuta, Steven Culpepper
 License: MIT License
 Comment: Standalone, CTAN-ready LaTeX beamer themes (illinois, illinoisclassic).
-   Self-contained; no trademarked University assets are bundled.
+
+Files: latex/illinois/illinois-wordmark.png
+   latex/illinois/illinois-wordmark-reverse.png
+   latex/illinois/illinois-blocki.pdf
+Copyright: Board of Trustees of the University of Illinois
+License: Trademark; included with permission
+Comment: The Illinois wordmark and block-I are registered trademarks of the
+   University of Illinois, bundled with permission and governed by the
+   University brand guidelines (https://creativeservices.illinois.edu/brand/),
+   not the MIT License.

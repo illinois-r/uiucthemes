@@ -17,9 +17,10 @@
   - `\usetheme{illinoisclassic}` — the traditional blue/orange header boxes.
 
   The themes depend only on `beamer`/`xcolor`/`graphicx`/`hyperref`. The
-  trademarked University wordmark is intentionally *not* bundled; the modern
-  theme renders a typographic wordmark and exposes
-  `\insertillinoiswordmark` for users authorized to drop in the official logo.
+  official Illinois wordmark and block-I are bundled (with University
+  permission, governed by the University brand guidelines rather than the MIT
+  license); use the `nowordmark` option or redefine `\insertillinoiswordmark`
+  to substitute your own.
 
 # uiucthemes 0.3.3
 

@@ -38,4 +38,10 @@
 \addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
 \addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
 
+% Default title-slide logo (bundled Illinois block-I). A \titlegraphic given in
+% the document preamble overrides this.
+\IfFileExists{illinois-blocki.pdf}{%
+  \titlegraphic{\includegraphics[height=1.2cm,keepaspectratio]{illinois-blocki}}%
+}{}
+
 \mode<all>
