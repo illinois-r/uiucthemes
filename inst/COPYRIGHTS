@@ -27,3 +27,10 @@ License: MIT License
 Files: inst/rmarkdown/templates/beamer_orange/*
 Copyright: Steven Culpepper
 License: MIT License
+
+Files: _extensions/*
+Copyright: James Joseph Balamuta, Steven Culpepper
+License: MIT License
+Comment: Quarto Beamer theme extensions porting the package's RMarkdown
+   Beamer templates. They build on the Metropolis beamer theme by
+   Matthias Vogelgesang (https://github.com/matze/mtheme).

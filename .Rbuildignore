@@ -13,3 +13,6 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^_extensions$
+^_quarto\.yml$
+^examples$

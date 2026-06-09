@@ -1,0 +1,42 @@
+% UIUC "Orange" recoloring for Quarto Beamer.
+%
+% Quarto port of the `beamer_orange` RMarkdown template (contributed by
+% Prof. Steven A. Culpepper) from the uiucthemes package. The Frankfurt theme +
+% dove color theme are loaded via the extension's _extension.yml; here we
+% recolor toward the official University of Illinois Urbana-Champaign orange.
+
+% Redefined colors for beamer
+% taken from
+% http://identitystandards.illinois.edu/graphicstandardsmanual/generalguidelines/colors.html
+\definecolor{beamer@UIUCblue}{RGB}{29,38,57}
+\definecolor{beamer@UIUCorange}{RGB}{215,85,54}
+\definecolor{beamer@UIUCgray}{RGB}{210,210,210}
+\definecolor{beamer@UIUCgray2}{RGB}{244,244,244}
+
+\setbeamercolor{frametitle}{fg=beamer@UIUCblue,bg=white}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
+\setbeamercolor{item projected}{fg=beamer@UIUCorange,bg=beamer@UIUCorange}
+
+\hypersetup{colorlinks = true,
+  urlcolor = beamer@UIUCblue,
+  linkcolor = beamer@UIUCorange,
+  citecolor = beamer@UIUCorange,
+  anchorcolor = beamer@UIUCorange}
+
+% Override title link color in head/foot so navigation text stays readable
+\addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
+\addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
+
+% Setup blocks
+\setbeamercolor{block title}{fg = white, bg = beamer@UIUCblue}
+\setbeamercolor{block body}{fg=black,bg=beamer@UIUCgray2}
+
+\setbeamercolor{block title alerted}{fg = white, bg = beamer@UIUCorange}
+\setbeamercolor{block body alerted}{fg=black,bg=beamer@UIUCgray2}
+
+\setbeamercolor{block title example}{fg = beamer@UIUCblue, bg = beamer@UIUCgray}
+\setbeamercolor{block body example}{fg=black,bg=beamer@UIUCgray2}
+
+% Place the Illinois logo on the title slide.
+\titlegraphic{\includegraphics[height=1.25cm,keepaspectratio]{ilogo.pdf}}

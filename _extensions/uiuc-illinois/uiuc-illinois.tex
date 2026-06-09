@@ -1,0 +1,50 @@
+% UIUC "Illinois" recoloring for Quarto Beamer.
+%
+% Quarto port of the `beamer_illinois` RMarkdown template from the uiucthemes
+% package. The AnnArbor theme + wolverine color theme are loaded via the
+% extension's _extension.yml; here we override the palette to match the
+% official University of Illinois Urbana-Champaign identity standards.
+
+% Redefined colors for beamer
+% taken from
+% http://identitystandards.illinois.edu/graphicstandardsmanual/generalguidelines/colors.html
+\definecolor{beamer@UIUCblue}{RGB}{29,38,57}
+\definecolor{beamer@UIUCorange}{RGB}{215,85,54}
+\definecolor{beamer@UIUCgray}{RGB}{210,210,210}
+\definecolor{beamer@UIUCgray2}{RGB}{244,244,244}
+
+\setbeamercolor{frametitle}{fg=beamer@UIUCblue,bg=beamer@UIUCgray}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{title}{fg=beamer@UIUCblue,bg=beamer@UIUCorange}
+\setbeamercolor{item projected}{fg=white,bg=beamer@UIUCorange}
+
+% Head/foot lines
+\setbeamercolor{title in head/foot}{fg=beamer@UIUCblue,bg=beamer@UIUCgray}
+\setbeamercolor{author in head/foot}{fg=white,bg=beamer@UIUCblue}
+\setbeamercolor{institute in head/foot}{fg=white,bg=beamer@UIUCorange}
+\setbeamercolor{date in head/foot}{fg=white,bg=beamer@UIUCorange}
+\setbeamercolor{section in head/foot}{fg=white,bg=beamer@UIUCblue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=beamer@UIUCorange}
+
+\hypersetup{colorlinks=true,
+  urlcolor=beamer@UIUCblue,
+  linkcolor=beamer@UIUCblue,% link color controls section, subsection, and title
+  citecolor=beamer@UIUCorange,
+  anchorcolor=beamer@UIUCorange}
+
+% Override title link color in head/foot so navigation text stays readable
+\addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
+\addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
+
+% Setup blocks
+\setbeamercolor{block title}{fg = white, bg = beamer@UIUCblue}
+\setbeamercolor{block body}{fg=black,bg=beamer@UIUCgray2}
+
+\setbeamercolor{block title alerted}{fg = white, bg = beamer@UIUCorange}
+\setbeamercolor{block body alerted}{fg=black,bg=beamer@UIUCgray2}
+
+\setbeamercolor{block title example}{fg = beamer@UIUCblue, bg = beamer@UIUCgray}
+\setbeamercolor{block body example}{fg=black,bg=beamer@UIUCgray2}
+
+% Place the Illinois logo on the title slide.
+\titlegraphic{\includegraphics[height=1.25cm,keepaspectratio]{ilogo.pdf}}

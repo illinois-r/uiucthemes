@@ -1,3 +1,16 @@
+# uiucthemes (development version)
+
+## NEW FEATURES
+
+- Added standalone [Quarto](https://quarto.org) Beamer themes that mirror the
+  package's RMarkdown Beamer templates. Install them into any Quarto project
+  with `quarto add illinois-r/uiucthemes` and select a format:
+  - `uiuc-metropolis-beamer` (mirrors `beamer_imetropolis`)
+  - `uiuc-illinois-beamer` (mirrors `beamer_illinois`)
+  - `uiuc-orange-beamer` (mirrors `beamer_orange`)
+
+  The extensions live in `_extensions/` with example decks in `examples/`.
+
 # uiucthemes 0.3.3
 
 ## CHANGES

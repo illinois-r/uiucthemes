@@ -1,0 +1,7 @@
+project:
+  title: "uiucthemes Quarto Beamer themes"
+
+# This project file marks the repository root so that the example decks in
+# examples/ can resolve the Beamer theme extensions in _extensions/.
+# It is not required by end users who install the themes with
+# `quarto add illinois-r/uiucthemes`.

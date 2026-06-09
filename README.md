@@ -32,6 +32,37 @@ Included in the package are:
 
 Screenshots of each template are included in package overview vignette.
 
+## Quarto Beamer themes
+
+Love the Beamer look but working in [Quarto](https://quarto.org) instead of
+R Markdown? The same UIUC Beamer aesthetics are also shipped as **standalone
+Quarto format extensions** in [`_extensions/`](_extensions). These do not
+require the R package — install them into any Quarto project with:
+
+``` bash
+quarto add illinois-r/uiucthemes
+```
+
+Then set the `format` in your document's YAML front matter:
+
+| Quarto format            | Mirrors RMarkdown template | Look                                           |
+|--------------------------|----------------------------|------------------------------------------------|
+| `uiuc-metropolis-beamer` | `beamer_imetropolis`       | Modern Metropolis theme recolored for Illinois |
+| `uiuc-illinois-beamer`   | `beamer_illinois`          | Classic Illinois blue/orange header boxes      |
+| `uiuc-orange-beamer`     | `beamer_orange`            | Minimalist, orange-forward                     |
+
+``` yaml
+---
+title: "My Talk"
+author: "Your Name"
+institute: "University of Illinois Urbana-Champaign"
+format: uiuc-metropolis-beamer
+---
+```
+
+Example decks for each theme live in [`examples/`](examples). See
+[`examples/README.md`](examples/README.md) for the full walkthrough.
+
 ## `beamer_illinois` - Example
 
 Within an `RMarkdown` file, add the following:

@@ -1,0 +1,21 @@
+title: UIUC Metropolis Beamer Theme
+author: James Joseph Balamuta
+version: 1.0.0
+quarto-required: ">=1.3.0"
+contributes:
+  formats:
+    beamer:
+      # Build on the Metropolis theme and recolor it with the official
+      # University of Illinois Urbana-Champaign palette.
+      theme: metropolis
+      navigation: empty
+      # Keep the modern 4:3 aspect ratio used by the RMarkdown original.
+      # Override with `aspectratio: 169` in your document for widescreen.
+      pdf-engine: xelatex
+      include-in-header:
+        - uiuc-metropolis.tex
+      # Ship the Illinois wordmark logos alongside the rendered document so
+      # that the in-header \includegraphics calls can find them.
+      format-resources:
+        - horizontal-o-illinois.png
+        - horizontal-rb-illinois.png
