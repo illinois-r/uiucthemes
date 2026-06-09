@@ -1,0 +1,92 @@
+% Demo / documentation deck for the modern `illinois` beamer theme.
+%
+% Compile with:  pdflatex illinois-demo.tex   (run twice for frame totals)
+%
+% This file doubles as a quick reference for the theme's features.
+
+\documentclass[aspectratio=169]{beamer}
+
+% Load the theme. Options:
+%   \usetheme[nowordmark]{illinois}      % hide the title-page wordmark
+%   \usetheme[nosectionpages]{illinois}  % no automatic section slides
+\usetheme{illinois}
+
+\title{The \texttt{illinois} Beamer Theme}
+\subtitle{A modern University of Illinois look}
+\author{John and Mary Doe}
+% The optional short form (in brackets) is shown in the footline.
+\institute[UIUC]{University of Illinois Urbana-Champaign}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Getting Started}
+
+\begin{frame}{Using the theme}
+  Add the theme to any \texttt{beamer} document:
+  \begin{block}{Preamble}
+    \texttt{\textbackslash documentclass\{beamer\}}\\
+    \texttt{\textbackslash usetheme\{illinois\}}
+  \end{block}
+  It is self-contained --- it needs only \texttt{beamer}, \texttt{xcolor},
+  \texttt{graphicx}, and \texttt{hyperref}.
+\end{frame}
+
+\begin{frame}{Lists}
+  \textbf{Unordered}
+  \begin{itemize}
+    \item University of Illinois Urbana-Champaign
+    \item Department of Statistics
+    \item Illinois Informatics Institute
+  \end{itemize}
+
+  \textbf{Ordered}
+  \begin{enumerate}
+    \item First point
+    \item Second point
+  \end{enumerate}
+\end{frame}
+
+\section{Blocks and Math}
+
+\begin{frame}{Blocks}
+  \begin{block}{Standard block}
+    Illinois blue title, soft tinted body.
+  \end{block}
+  \begin{alertblock}{Alert block}
+    Illinois orange for emphasis.
+  \end{alertblock}
+  \begin{exampleblock}{Example block}
+    Used for examples and asides.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Mathematics}
+  \begin{exampleblock}{Binomial Theorem}
+    \begin{equation*}
+      f\left(k\right) = \binom{n}{k} p^{k}\left(1-p\right)^{n-k}
+    \end{equation*}
+  \end{exampleblock}
+  Inline math such as $e^{i\pi} + 1 = 0$ is colored normally.
+\end{frame}
+
+\begin{frame}{Columns}
+  \begin{columns}
+    \begin{column}{0.48\textwidth}
+      \textit{Hello!}
+      \begin{itemize}
+        \item left column
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Goodbye!}
+      \begin{enumerate}
+        \item right column
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\end{document}

@@ -1,0 +1,43 @@
+% beamercolorthemeillinoisclassic.sty
+% Part of the `illinois` beamer theme package.
+%
+% Color theme for the traditional `illinoisclassic` beamer theme: blue/orange
+% header boxes in the spirit of the original `beamer_illinois` RMarkdown
+% template. Builds on the shared `illinois` palette and overrides the
+% head/foot and frame-title colors for an infolines-style layout.
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamercolorthemeillinoisclassic}[2024/01/01 v1.0 UIUC classic color theme]
+
+\mode<presentation>
+
+% Reuse the official UIUC palette and base assignments.
+\usecolortheme{illinois}
+
+% Frame titles: blue text on a light-gray bar.
+\setbeamercolor{frametitle}{fg=illinoisblue,bg=illinoisgray}
+\setbeamercolor{framesubtitle}{fg=illinoisblue,bg=illinoisgray}
+
+% Title block.
+\setbeamercolor{title}{fg=illinoisblue,bg=illinoisorange}
+\setbeamercolor{item projected}{fg=white,bg=illinoisorange}
+
+% Head / foot lines (used by the infolines outer theme).
+\setbeamercolor{title in head/foot}{fg=illinoisblue,bg=illinoisgray}
+\setbeamercolor{author in head/foot}{fg=white,bg=illinoisblue}
+\setbeamercolor{institute in head/foot}{fg=white,bg=illinoisorange}
+\setbeamercolor{date in head/foot}{fg=white,bg=illinoisorange}
+\setbeamercolor{section in head/foot}{fg=white,bg=illinoisblue}
+\setbeamercolor{subsection in head/foot}{fg=white,bg=illinoisorange}
+
+% Blocks: solid blue titles on a light-gray body.
+\setbeamercolor{block title}{fg=white,bg=illinoisblue}
+\setbeamercolor{block body}{fg=black,bg=illinoisgraylight}
+\setbeamercolor{block title alerted}{fg=white,bg=illinoisorange}
+\setbeamercolor{block body alerted}{fg=black,bg=illinoisgraylight}
+\setbeamercolor{block title example}{fg=illinoisblue,bg=illinoisgray}
+\setbeamercolor{block body example}{fg=black,bg=illinoisgraylight}
+
+\mode<all>

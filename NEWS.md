@@ -11,6 +11,16 @@
 
   The extensions live in `_extensions/` with example decks in `examples/`.
 
+- Added a standalone, CTAN-ready LaTeX beamer theme package in `latex/illinois/`
+  for use directly from plain LaTeX (no R or Quarto required):
+  - `\usetheme{illinois}` — a modern, flat Illinois look.
+  - `\usetheme{illinoisclassic}` — the traditional blue/orange header boxes.
+
+  The themes depend only on `beamer`/`xcolor`/`graphicx`/`hyperref`. The
+  trademarked University wordmark is intentionally *not* bundled; the modern
+  theme renders a typographic wordmark and exposes
+  `\insertillinoiswordmark` for users authorized to drop in the official logo.
+
 # uiucthemes 0.3.3
 
 ## CHANGES

@@ -1,0 +1,81 @@
+% beamerthemeillinois.sty
+% Main file of the `illinois` beamer theme package.
+%
+% A clean, modern University of Illinois Urbana-Champaign (UIUC) beamer theme.
+% Self-contained: depends only on beamer, xcolor, graphicx, and hyperref
+% (all loaded by beamer itself).
+%
+% Usage:
+%   \documentclass{beamer}
+%   \usetheme{illinois}
+%
+% Options:
+%   nowordmark      -- do not print the typographic "Illinois" wordmark on the
+%                      title page.
+%   nosectionpages  -- do not insert an automatic section-title slide at the
+%                      start of each \section.
+%
+% A companion theme, `illinoisclassic`, provides the traditional blue/orange
+% header-box look (\usetheme{illinoisclassic}).
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamerthemeillinois}[2024/01/01 v1.0 UIUC beamer theme]
+
+\mode<presentation>
+
+% --- Options ---------------------------------------------------------------
+\newif\ifillinois@wordmark
+\illinois@wordmarktrue
+\newif\ifillinois@sectionpages
+\illinois@sectionpagestrue
+\DeclareOptionBeamer{nowordmark}{\illinois@wordmarkfalse}
+\DeclareOptionBeamer{nosectionpages}{\illinois@sectionpagesfalse}
+\ProcessOptionsBeamer
+
+% --- Load the modular sub-themes -------------------------------------------
+\usecolortheme{illinois}
+\usefonttheme{illinois}
+\useinnertheme{illinois}
+\useoutertheme{illinois}
+
+% --- Typographic Illinois wordmark -----------------------------------------
+% Self-contained text mark used in place of the trademarked University logo.
+% Users may redefine it, e.g. to drop in an official wordmark image:
+%   \renewcommand{\insertillinoiswordmark}{\includegraphics[height=6mm]{logo}}
+\ifillinois@wordmark
+  \newcommand{\insertillinoiswordmark}{%
+    {\usebeamerfont{institute}\bfseries\scshape
+      \textcolor{illinoisblue}{Illinois}}%
+  }
+\else
+  \newcommand{\insertillinoiswordmark}{}
+\fi
+
+% --- Hyperlink colors ------------------------------------------------------
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=illinoisorange,
+  urlcolor=illinoisorange,
+  citecolor=illinoisorange,
+  filecolor=illinoisorange}
+
+% --- Section title slides --------------------------------------------------
+\defbeamertemplate*{section page}{illinois}{%
+  \centering
+  \vfill
+  {\usebeamercolor[fg]{title}\usebeamerfont{title}\insertsectionhead\par}%
+  \vskip0.4em
+  {\usebeamercolor[fg]{title separator}\rule{0.5\textwidth}{1.5pt}\par}%
+  \vfill
+}
+\ifillinois@sectionpages
+  \AtBeginSection[]{%
+    \begin{frame}[plain,c]
+      \sectionpage
+    \end{frame}%
+  }
+\fi
+
+\mode<all>

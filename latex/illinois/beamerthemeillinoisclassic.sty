@@ -1,0 +1,41 @@
+% beamerthemeillinoisclassic.sty
+% Companion theme of the `illinois` beamer theme package.
+%
+% The traditional University of Illinois Urbana-Champaign (UIUC) look: blue and
+% orange header/footer bars with colored block boxes, in the spirit of the
+% original `beamer_illinois` RMarkdown template. Self-contained: depends only
+% on stock beamer themes plus the bundled UIUC color theme.
+%
+% Usage:
+%   \documentclass{beamer}
+%   \usetheme{illinoisclassic}
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamerthemeillinoisclassic}[2024/01/01 v1.0 UIUC classic beamer theme]
+
+\mode<presentation>
+
+% Structure: infolines footer/headline + rounded inner blocks, recolored with
+% the UIUC palette.
+\useoutertheme{infolines}
+\useinnertheme{rounded}
+\usecolortheme{illinoisclassic}
+
+% Hide navigation symbols.
+\setbeamertemplate{navigation symbols}{}
+
+% Hyperlink colors (blue for navigation/URLs, orange for citations).
+\hypersetup{%
+  colorlinks=true,
+  urlcolor=illinoisblue,
+  linkcolor=illinoisblue,
+  citecolor=illinoisorange,
+  filecolor=illinoisorange}
+
+% Keep head/foot link text readable against its colored background.
+\addtobeamertemplate{headline}{\hypersetup{linkcolor=.}}{}
+\addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
+
+\mode<all>

@@ -1,0 +1,51 @@
+% beamerouterthemeillinois.sty
+% Part of the `illinois` beamer theme package.
+%
+% Outer theme for the (modern) `illinois` beamer theme: a full-width colored
+% frame-title bar, a minimal footline carrying the institute and a page-number
+% fraction, an orange accent rule, and no navigation symbols.
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamerouterthemeillinois}[2024/01/01 v1.0 UIUC outer theme]
+
+\mode<presentation>
+
+% Hide the navigation symbols clutter.
+\setbeamertemplate{navigation symbols}{}
+
+% No headline; the frame title bar carries the slide heading.
+\setbeamertemplate{headline}{}
+
+% Full-width frame-title bar (Illinois blue background, white text).
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,sep=0pt,ht=3.0ex,dp=1.4ex]{frametitle}%
+    \hspace*{1.5ex}\usebeamerfont{frametitle}\insertframetitle%
+    \ifx\insertframesubtitle\@empty\else
+      \hskip1ex{\usebeamercolor[fg]{framesubtitle}%
+        \usebeamerfont{framesubtitle}\insertframesubtitle}%
+    \fi
+    \hfill\hspace*{1.5ex}%
+  \end{beamercolorbox}%
+}
+
+% Minimal footline: institute on the left, frame x / total on the right,
+% separated from the slide body by a thin Illinois-orange rule.
+\setbeamertemplate{footline}{%
+  {\usebeamercolor[fg]{progress bar}\hrule height0.8pt}%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.5ex,dp=1.2ex,leftskip=1.5ex]{footline}%
+      \usebeamerfont{footline}\insertshortinstitute\hfill
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.5ex,dp=1.2ex,rightskip=1.5ex]{footline}%
+      \usebeamerfont{footline}\hfill
+      \insertframenumber\,/\,\inserttotalframenumber%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\mode<all>

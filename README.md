@@ -63,6 +63,24 @@ format: uiuc-metropolis-beamer
 Example decks for each theme live in [`examples/`](examples). See
 [`examples/README.md`](examples/README.md) for the full walkthrough.
 
+## Standalone LaTeX beamer theme (CTAN-ready)
+
+Prefer to write slides in plain LaTeX? A self-contained beamer theme lives in
+[`latex/illinois/`](latex/illinois) and depends only on `beamer`, `xcolor`,
+`graphicx`, and `hyperref` (no R or Quarto):
+
+``` latex
+\documentclass{beamer}
+\usetheme{illinois}        % modern, flat Illinois look
+% \usetheme{illinoisclassic}  % traditional blue/orange header boxes
+```
+
+The trademarked University wordmark is intentionally not bundled; the modern
+theme renders a typographic wordmark and exposes `\insertillinoiswordmark` so
+authorized users can drop in the official logo. See
+[`latex/illinois/README.md`](latex/illinois/README.md) for installation and
+options.
+
 ## `beamer_illinois` - Example
 
 Within an `RMarkdown` file, add the following:

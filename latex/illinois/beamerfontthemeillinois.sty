@@ -1,0 +1,26 @@
+% beamerfontthemeillinois.sty
+% Part of the `illinois` beamer theme package.
+%
+% Font theme for the (modern) `illinois` beamer theme: a clean sans-serif
+% deck with bold, small-caps frame titles.
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamerfontthemeillinois}[2024/01/01 v1.0 UIUC font theme]
+
+\mode<presentation>
+
+% Beamer already defaults to a sans-serif family; make the headline elements
+% feel a touch more deliberate.
+\setbeamerfont{title}{series=\bfseries,size=\LARGE}
+\setbeamerfont{subtitle}{series=\mdseries,size=\large}
+\setbeamerfont{frametitle}{series=\bfseries,shape=\scshape}
+\setbeamerfont{framesubtitle}{series=\mdseries}
+\setbeamerfont{block title}{series=\bfseries}
+\setbeamerfont{footline}{size=\scriptsize}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{institute}{size=\small}
+\setbeamerfont{date}{size=\small}
+
+\mode<all>

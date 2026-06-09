@@ -1,0 +1,48 @@
+% beamerinnerthemeillinois.sty
+% Part of the `illinois` beamer theme package.
+%
+% Inner theme for the (modern) `illinois` beamer theme: rounded blocks,
+% simple square list markers, and a centered title page with an Illinois
+% accent rule and optional wordmark.
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamerinnerthemeillinois}[2024/01/01 v1.0 UIUC inner theme]
+
+\mode<presentation>
+
+% Rounded blocks for a softer, modern feel.
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% Clean list markers.
+\setbeamertemplate{itemize items}[square]
+\setbeamertemplate{enumerate items}[default]
+
+% Centered title page. The optional wordmark macro \insertillinoiswordmark is
+% defined by the main theme and may be redefined/cleared by the user.
+\defbeamertemplate*{title page}{illinois}{%
+  \vbox{}%
+  \vfill
+  \begingroup
+    \centering
+    {\usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\par}%
+    \ifx\insertsubtitle\@empty\else
+      \vskip0.35em%
+      {\usebeamercolor[fg]{subtitle}\usebeamerfont{subtitle}\insertsubtitle\par}%
+    \fi
+    \vskip0.6em
+    {\usebeamercolor[fg]{title separator}\rule{\textwidth}{1.5pt}\par}%
+    \vskip0.9em
+    {\usebeamercolor[fg]{author}\usebeamerfont{author}\insertauthor\par}%
+    \vskip0.3em
+    {\usebeamercolor[fg]{institute}\usebeamerfont{institute}\insertinstitute\par}%
+    \vskip0.3em
+    {\usebeamercolor[fg]{date}\usebeamerfont{date}\insertdate\par}%
+    \vskip0.7em
+    {\insertillinoiswordmark\par}%
+  \endgroup
+  \vfill
+}
+
+\mode<all>

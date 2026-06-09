@@ -1,0 +1,44 @@
+% Demo deck for the traditional `illinoisclassic` beamer theme.
+%
+% Compile with:  pdflatex illinoisclassic-demo.tex   (run twice for headers)
+
+\documentclass{beamer}
+
+\usetheme{illinoisclassic}
+
+\title{The \texttt{illinoisclassic} Beamer Theme}
+\subtitle{The traditional Illinois blue/orange look}
+\author{John and Mary Doe}
+\institute[UIUC]{University of Illinois Urbana-Champaign}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Overview}
+\subsection{Header boxes}
+
+\begin{frame}{Frame title}
+  The classic theme uses an \texttt{infolines}-style headline and footline
+  recolored with the official UIUC palette.
+  \begin{itemize}
+    \item University of Illinois Urbana-Champaign
+    \item Department of Statistics
+  \end{itemize}
+\end{frame}
+
+\subsection{Blocks}
+
+\begin{frame}{Blocks}
+  \begin{block}{Standard block}
+    Solid blue title on a light body.
+  \end{block}
+  \begin{exampleblock}{Binomial Theorem}
+    \begin{equation*}
+      f\left(k\right) = \binom{n}{k} p^{k}\left(1-p\right)^{n-k}
+    \end{equation*}
+  \end{exampleblock}
+\end{frame}
+
+\end{document}

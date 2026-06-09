@@ -1,0 +1,63 @@
+% beamercolorthemeillinois.sty
+% Part of the `illinois` beamer theme package.
+%
+% University of Illinois Urbana-Champaign (UIUC) color theme.
+% Defines the official palette and applies it to the (modern) `illinois`
+% beamer theme. Also reused as the palette base for `illinoisclassic`.
+%
+% Copyright (c) James Joseph Balamuta and contributors.
+% Released under the MIT License (see LICENSE).
+
+\ProvidesPackage{beamercolorthemeillinois}[2024/01/01 v1.0 UIUC color theme]
+
+\mode<presentation>
+
+% --- Official UIUC palette -------------------------------------------------
+% https://creativeservices.illinois.edu/brand/logos-and-colors.html
+\definecolor{illinoisblue}{RGB}{19,41,75}     % Illinois Blue
+\definecolor{illinoisorange}{RGB}{232,74,39}  % Illinois Orange
+\definecolor{illinoisgray}{RGB}{210,210,210}  % light gray accent
+\definecolor{illinoisgraylight}{RGB}{244,244,244}
+
+% --- Base text and structure ----------------------------------------------
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{alerted text}{fg=illinoisorange}
+\setbeamercolor{example text}{fg=illinoisblue}
+\setbeamercolor{structure}{fg=illinoisblue}
+
+% Palettes (used by various outer themes)
+\setbeamercolor{palette primary}{fg=white,bg=illinoisblue}
+\setbeamercolor{palette secondary}{fg=white,bg=illinoisorange}
+\setbeamercolor{palette tertiary}{fg=white,bg=illinoisblue}
+\setbeamercolor{palette quaternary}{fg=white,bg=illinoisblue}
+
+% --- Title and frame titles ------------------------------------------------
+\setbeamercolor{title}{fg=illinoisblue}
+\setbeamercolor{subtitle}{fg=illinoisorange}
+\setbeamercolor{title separator}{fg=illinoisorange}
+\setbeamercolor{frametitle}{fg=white,bg=illinoisblue}
+\setbeamercolor{framesubtitle}{fg=illinoisorange}
+
+% --- Lists -----------------------------------------------------------------
+\setbeamercolor{item}{fg=illinoisorange}
+\setbeamercolor{itemize item}{fg=illinoisorange}
+\setbeamercolor{itemize subitem}{fg=illinoisorange}
+\setbeamercolor{enumerate item}{fg=illinoisorange}
+\setbeamercolor{itemize/enumerate body}{fg=black}
+
+% --- Blocks ----------------------------------------------------------------
+\setbeamercolor{block title}{fg=white,bg=illinoisblue}
+\setbeamercolor{block body}{fg=black,bg=illinoisblue!10}
+\setbeamercolor{block title alerted}{fg=white,bg=illinoisorange}
+\setbeamercolor{block body alerted}{fg=black,bg=illinoisorange!10}
+\setbeamercolor{block title example}{fg=white,bg=illinoisorange}
+\setbeamercolor{block body example}{fg=black,bg=illinoisorange!10}
+
+% --- Footline and page numbering -------------------------------------------
+\setbeamercolor{footline}{fg=illinoisblue}
+\setbeamercolor{page number in head/foot}{fg=illinoisblue}
+
+% --- Progress bar (used by the modern outer theme) -------------------------
+\setbeamercolor{progress bar}{fg=illinoisorange,bg=illinoisorange!30}
+
+\mode<all>
