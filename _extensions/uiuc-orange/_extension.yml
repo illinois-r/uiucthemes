@@ -10,6 +10,9 @@ contributes:
       theme: Frankfurt
       colortheme: dove
       navigation: empty
+      # This classic theme uses stock (Type1-era) beamer themes; pdflatex is
+      # the natural, fast engine and avoids Unicode-font setup.
+      pdf-engine: pdflatex
       include-in-header:
         - uiuc-orange.tex
       # Ship the Illinois logo so the title-slide \includegraphics can find it.

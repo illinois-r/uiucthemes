@@ -29,7 +29,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install TeX Live and fonts
+      - name: Install TeX Live and fonts (for the standalone LaTeX demos)
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
@@ -37,7 +37,6 @@ jobs:
             texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-fonts-extra \
-            texlive-xetex \
             latexmk \
             poppler-utils
 
@@ -61,8 +60,10 @@ jobs:
           latexmk -pdf -interaction=nonstopmode -halt-on-error illinois-demo.tex
           latexmk -pdf -interaction=nonstopmode -halt-on-error illinoisclassic-demo.tex
 
-      - name: Set up Quarto
+      - name: Set up Quarto (with its own TinyTeX for clean package auto-install)
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - name: Render Quarto example decks
         run: |
