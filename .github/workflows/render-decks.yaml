@@ -26,6 +26,11 @@ permissions: read-all
 jobs:
   render-decks:
     runs-on: ubuntu-latest
+    # Authenticate GitHub API calls (e.g. Quarto's TinyTeX release lookup) so we
+    # don't hit anonymous rate limits ("403 Forbidden" on tinytex-releases).
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
