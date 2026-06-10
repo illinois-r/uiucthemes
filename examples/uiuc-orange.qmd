@@ -29,7 +29,7 @@ Frame content
 
 Content inside of a box.
 
-## $\LaTeX$
+## Mathematics
 
 A level-three heading becomes a Beamer block:
 
