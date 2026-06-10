@@ -1,5 +1,5 @@
 project:
-  title: "uiucthemes Quarto Beamer themes"
+  type: default
 
 # This project file marks the repository root so that the example decks in
 # examples/ can resolve the Beamer theme extensions in _extensions/.

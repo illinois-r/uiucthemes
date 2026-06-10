@@ -1,0 +1,95 @@
+# Compile the standalone LaTeX beamer themes and render the Quarto example
+# decks, then publish the resulting PDFs (and first-slide PNG previews) as
+# build artifacts. This verifies that the themes actually build.
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '_extensions/**'
+      - 'examples/**'
+      - 'latex/**'
+      - '_quarto.yml'
+      - '.github/workflows/render-decks.yaml'
+  pull_request:
+    paths:
+      - '_extensions/**'
+      - 'examples/**'
+      - 'latex/**'
+      - '_quarto.yml'
+      - '.github/workflows/render-decks.yaml'
+  workflow_dispatch:
+
+name: render-decks.yaml
+
+permissions: read-all
+
+jobs:
+  render-decks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX Live and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-xetex \
+            latexmk \
+            poppler-utils
+
+      - name: Register Fira fonts with fontconfig (for the Metropolis deck)
+        run: |
+          # The Metropolis theme uses Fira via fontspec under XeLaTeX. The TeX
+          # Live `fira` package ships the OTFs in the texmf tree, but XeLaTeX
+          # finds named families through fontconfig, so expose them there.
+          # Best-effort: Metropolis falls back to default fonts if unavailable.
+          FIRA_DIR="$(kpsewhich -var-value TEXMFDIST)/fonts/opentype/public/fira"
+          if [ -d "$FIRA_DIR" ]; then
+            sudo mkdir -p /usr/share/fonts/opentype/fira
+            sudo cp "$FIRA_DIR"/*.otf /usr/share/fonts/opentype/fira/ || true
+            sudo fc-cache -f >/dev/null 2>&1 || true
+          fi
+          fc-list | grep -i "fira" || echo "Fira not registered; Metropolis will use fallback fonts."
+
+      - name: Compile LaTeX beamer demos
+        working-directory: latex/illinois
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error illinois-demo.tex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error illinoisclassic-demo.tex
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render Quarto example decks
+        run: |
+          quarto render examples/uiuc-illinois.qmd
+          quarto render examples/uiuc-orange.qmd
+          quarto render examples/uiuc-metropolis.qmd
+
+      - name: Generate first-slide PNG previews
+        run: |
+          mkdir -p previews
+          for f in latex/illinois/illinois-demo.pdf \
+                   latex/illinois/illinoisclassic-demo.pdf \
+                   examples/uiuc-metropolis.pdf \
+                   examples/uiuc-illinois.pdf \
+                   examples/uiuc-orange.pdf; do
+            if [ -f "$f" ]; then
+              pdftoppm -png -r 150 -f 1 -l 1 "$f" "previews/$(basename "${f%.pdf}")"
+            fi
+          done
+
+      - name: Upload PDFs and previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: beamer-decks
+          path: |
+            latex/illinois/illinois-demo.pdf
+            latex/illinois/illinoisclassic-demo.pdf
+            examples/*.pdf
+            previews/*.png
+          if-no-files-found: error
